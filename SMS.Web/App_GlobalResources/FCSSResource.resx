@@ -1,0 +1,1669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="AccountIsDisabled" xml:space="preserve">
+    <value>Account has been locked.</value>
+  </data>
+  <data name="AccountOrName" xml:space="preserve">
+    <value>Account or Name</value>
+  </data>
+  <data name="AccountOrPasswordWrong" xml:space="preserve">
+    <value>Account or password is wrong.</value>
+  </data>
+  <data name="ActualData" xml:space="preserve">
+    <value>ActualDate</value>
+  </data>
+  <data name="ActualHoursWorked" xml:space="preserve">
+    <value>ActualWorkHours</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="AddIssue" xml:space="preserve">
+    <value>Input informations of the issue.</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AddUserGroup" xml:space="preserve">
+    <value>Increase User Group</value>
+    <comment>添加用户组</comment>
+  </data>
+  <data name="AddWorkingHour" xml:space="preserve">
+    <value>Increase Work Hours</value>
+    <comment>添加作业用时</comment>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AlreadyExists" xml:space="preserve">
+    <value>{0} already exists.</value>
+  </data>
+  <data name="AlreadyFinish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="AlreadyUploadAttachment" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="AmendProfileMessage" xml:space="preserve">
+    <value>Profile Settings</value>
+  </data>
+  <data name="AnOrderBy" xml:space="preserve">
+    <value>Orderer</value>
+  </data>
+  <data name="AreYouConformDelete" xml:space="preserve">
+    <value>Are you conform delete {0}</value>
+  </data>
+  <data name="AreYouConformDisable" xml:space="preserve">
+    <value>Are you conform disable the {0}?</value>
+  </data>
+  <data name="AreYouConformEnable" xml:space="preserve">
+    <value>Are you conform enable the {0}?</value>
+  </data>
+  <data name="Asker" xml:space="preserve">
+    <value>Asker</value>
+  </data>
+  <data name="AskerDoNotBelongToTheCompany" xml:space="preserve">
+    <value>Asker do not belong to the company.</value>
+  </data>
+  <data name="AskerNotExists" xml:space="preserve">
+    <value>Asker do not exists</value>
+  </data>
+  <data name="AssociationLabel" xml:space="preserve">
+    <value>Associate Labels</value>
+    <comment>关联标签</comment>
+  </data>
+  <data name="Attachement" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="AttachementManagement" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="AttachmentDeleteFail" xml:space="preserve">
+    <value>Attachment delete failed.</value>
+  </data>
+  <data name="AttachmentList" xml:space="preserve">
+    <value>AttachmentList</value>
+    <comment>附件列表</comment>
+  </data>
+  <data name="AttachmentNotFound" xml:space="preserve">
+    <value>Attachment not found.</value>
+  </data>
+  <data name="AtThatTimeFollower" xml:space="preserve">
+    <value>Follower</value>
+    <comment>当时跟进人</comment>
+  </data>
+  <data name="BelongCustomer" xml:space="preserve">
+    <value>Customer</value>
+    <comment>所属客户</comment>
+  </data>
+  <data name="BelongIssue" xml:space="preserve">
+    <value>Issue</value>
+    <comment>所属问题</comment>
+  </data>
+  <data name="BelongProject" xml:space="preserve">
+    <value>Project</value>
+    <comment>所属项目</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CannotLastThan" xml:space="preserve">
+    <value>{0} can not later than {1}</value>
+    <comment>{0}不能晚于{1}</comment>
+  </data>
+  <data name="CarbonCopyOther" xml:space="preserve">
+    <value>OtherE-mail</value>
+    <comment>抄送组外人员</comment>
+  </data>
+  <data name="CarbonCopyUsers" xml:space="preserve">
+    <value>CarbonCopy</value>
+    <comment>抄送组成员</comment>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Choose</value>
+    <comment>选择</comment>
+  </data>
+  <data name="ChoseProjectThenSearchByTags" xml:space="preserve">
+    <value>You can choose the project listbox then search by projectTags.</value>
+  </data>
+  <data name="ChouseMember" xml:space="preserve">
+    <value>Choose Member</value>
+    <comment>成员选择</comment>
+  </data>
+  <data name="ChouseTheGoalCustomer" xml:space="preserve">
+    <value>ChooseCustomer</value>
+    <comment>选择目标客户</comment>
+  </data>
+  <data name="ClaimDate" xml:space="preserve">
+    <value>ClaimDate</value>
+    <comment>问题认领时间</comment>
+  </data>
+  <data name="CloseDate" xml:space="preserve">
+    <value>CloseDate</value>
+    <comment>问题关闭时间</comment>
+  </data>
+  <data name="CloseSeeNew" xml:space="preserve">
+    <value>Close And See New</value>
+    <comment>折起查看最新</comment>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>CompanyName</value>
+    <comment>公司名称</comment>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+    <comment>联系人</comment>
+  </data>
+  <data name="ContactManagement" xml:space="preserve">
+    <value>Contacters</value>
+    <comment>联系人管理</comment>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+    <comment>内容</comment>
+  </data>
+  <data name="ContinueAdd" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="ContractAmount" xml:space="preserve">
+    <value>ContractAmount</value>
+  </data>
+  <data name="ContractAmountConstitute" xml:space="preserve">
+    <value>AmountProportion</value>
+  </data>
+  <data name="CorrespondingToTheScheduledDate" xml:space="preserve">
+    <value>Dispose Date</value>
+  </data>
+  <data name="CountAlreadyDisableSuccesslly" xml:space="preserve">
+    <value>Disable {0} accounts successfully.</value>
+    <comment>{0}个客户禁用成功!</comment>
+  </data>
+  <data name="CountAlreadyEnableSuccesslly" xml:space="preserve">
+    <value>Enable {0} accounts successfully.</value>
+    <comment>{0}个客户启用成功!</comment>
+  </data>
+  <data name="CreationDate" xml:space="preserve">
+    <value>Creation</value>
+    <comment>发行时间</comment>
+  </data>
+  <data name="Creator" xml:space="preserve">
+    <value>Creator</value>
+    <comment>创建人</comment>
+  </data>
+  <data name="CurrentProcessors" xml:space="preserve">
+    <value>CurrentProcessors</value>
+    <comment>当前处理者</comment>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="CustomerContact" xml:space="preserve">
+    <value>Customer Contact</value>
+  </data>
+  <data name="CustomerContactAccountOrName" xml:space="preserve">
+    <value>Customer contact account or name</value>
+  </data>
+  <data name="CustomerEvaluate" xml:space="preserve">
+    <value>Customer Evaluate</value>
+  </data>
+  <data name="CustomerManagement" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="CustomersConfirm" xml:space="preserve">
+    <value>C.Confirm</value>
+    <comment>客户确认</comment>
+  </data>
+  <data name="CustomerServiceManagement" xml:space="preserve">
+    <value>Customer Service</value>
+  </data>
+  <data name="Cycle" xml:space="preserve">
+    <value>Cycle</value>
+  </data>
+  <data name="DataErrorPleaseCheckTemplate" xml:space="preserve">
+    <value>Data error,Please check template</value>
+  </data>
+  <data name="DataImport" xml:space="preserve">
+    <value>Data Import</value>
+  </data>
+  <data name="DayOffDeepIntoTheMightCoefficient" xml:space="preserve">
+    <value>HolidayMidnight</value>
+  </data>
+  <data name="DayOffOutsideWorkingHoursCoefficient" xml:space="preserve">
+    <value>HolidayNon-S.Time</value>
+  </data>
+  <data name="DayOffWorkingHoursCoefficient" xml:space="preserve">
+    <value>HolidayS.Time</value>
+  </data>
+  <data name="DefaultPassword" xml:space="preserve">
+    <value>DefaultPassword</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="DepartmentIssue" xml:space="preserve">
+    <value>Department Issues </value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>描述</comment>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>Display</value>
+    <comment>查询列表显示个数的描述</comment>
+  </data>
+  <data name="DisposeType" xml:space="preserve">
+    <value>DisposeType</value>
+    <comment>问题处理方式</comment>
+  </data>
+  <data name="Doohickey" xml:space="preserve">
+    <value>Tip: hold down the SHIFT key, move the mouse can choose more.</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+    <comment>下载</comment>
+  </data>
+  <data name="Duty" xml:space="preserve">
+    <value>Duty</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EffectiveTime" xml:space="preserve">
+    <value>EffectiveTime</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>EndDate</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>EveryDay</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>EveryMonth</value>
+  </data>
+  <data name="EveryWeek" xml:space="preserve">
+    <value>EveryWeek</value>
+  </data>
+  <data name="ExecutionTime" xml:space="preserve">
+    <value>ExecutionTime</value>
+  </data>
+  <data name="ExistsNoLegitimateEmailAddress" xml:space="preserve">
+    <value>{0} exists no legitimate e-mail address</value>
+  </data>
+  <data name="ExpectReplyDate" xml:space="preserve">
+    <value>HopeReplyDate</value>
+    <comment>需求回复时间</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="FeedbackSuggestion" xml:space="preserve">
+    <value>FeedbackSuggestion</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>FileName</value>
+    <comment>文件名称</comment>
+  </data>
+  <data name="FileNotExists" xml:space="preserve">
+    <value>FileNotExists</value>
+    <comment>文件不存在</comment>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>FileSize</value>
+  </data>
+  <data name="Fillworkrecord" xml:space="preserve">
+    <value>WriteTheRecord</value>
+  </data>
+  <data name="FilterMember" xml:space="preserve">
+    <value>SearchMember</value>
+  </data>
+  <data name="FixWorkRecord" xml:space="preserve">
+    <value>FixTheRecord</value>
+  </data>
+  <data name="FJSCContractAmount" xml:space="preserve">
+    <value>FJSCContractAmount</value>
+  </data>
+  <data name="Follower" xml:space="preserve">
+    <value>Follower</value>
+    <comment>跟进人</comment>
+  </data>
+  <data name="FollowerDoesNotExist" xml:space="preserve">
+    <value>Follower does not exist</value>
+  </data>
+  <data name="ForThisDate" xml:space="preserve">
+    <value>RunDate</value>
+  </data>
+  <data name="FreeWorkTime" xml:space="preserve">
+    <value>FreeTime</value>
+  </data>
+  <data name="FujitsuCustomerManagementSystem" xml:space="preserve">
+    <value>Customer Management System</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>FullName</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="GetModelFillContent" xml:space="preserve">
+    <value>Get a model and fill the form.</value>
+  </data>
+  <data name="GroupMember" xml:space="preserve">
+    <value>Group Member</value>
+  </data>
+  <data name="GroupMemberList" xml:space="preserve">
+    <value>Group Member Management</value>
+  </data>
+  <data name="GroupMemberManagement" xml:space="preserve">
+    <value>Group Member Management</value>
+  </data>
+  <data name="GroupMemberMessage" xml:space="preserve">
+    <value>Group Member</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>GroupName</value>
+  </data>
+  <data name="HasBeenAddSuccessfully" xml:space="preserve">
+    <value>{0} has been add successfully.</value>
+  </data>
+  <data name="HasBeenDeletedSuccessfully" xml:space="preserve">
+    <value>{0} has been deleted successfully.</value>
+  </data>
+  <data name="HasBeenDisableSuccessfully" xml:space="preserve">
+    <value>{0} has been disable successfully.</value>
+  </data>
+  <data name="HasBeenEnableSuccessfully" xml:space="preserve">
+    <value>{0} has been enable successfully.</value>
+  </data>
+  <data name="HasBeenModifiedSuccessfully" xml:space="preserve">
+    <value>{0} has been modified successfully.</value>
+  </data>
+  <data name="HasBeenPashSuccessfully" xml:space="preserve">
+    <value>{0} has been pash successfully</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HopeResponseTime" xml:space="preserve">
+    <value>ExpectReplyDate</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="InstallDate" xml:space="preserve">
+    <value>InstallDate</value>
+  </data>
+  <data name="Installer" xml:space="preserve">
+    <value>Installer</value>
+  </data>
+  <data name="Inverse" xml:space="preserve">
+    <value>Inverse</value>
+    <comment>反选</comment>
+  </data>
+  <data name="IsDelete" xml:space="preserve">
+    <value>Are you sure to delete?</value>
+  </data>
+  <data name="IsDisable" xml:space="preserve">
+    <value>Are you sure to disable?</value>
+  </data>
+  <data name="IsDone" xml:space="preserve">
+    <value>Are you sure to set the task finish?</value>
+  </data>
+  <data name="IsEnable" xml:space="preserve">
+    <value>Are you sure to enable?</value>
+  </data>
+  <data name="IsFinish" xml:space="preserve">
+    <value>HasBeenSolved</value>
+  </data>
+  <data name="IsInstalled" xml:space="preserve">
+    <value>BeInstalled</value>
+  </data>
+  <data name="IsLive" xml:space="preserve">
+    <value>TrueIns.</value>
+  </data>
+  <data name="IsNeedOffer" xml:space="preserve">
+    <value>NeedOffer</value>
+  </data>
+  <data name="IsNeedToExecuteSql" xml:space="preserve">
+    <value>Run Sql</value>
+  </data>
+  <data name="IsPushToIssue" xml:space="preserve">
+    <value>Are you sure push the tag to those issues? </value>
+  </data>
+  <data name="IsResetPassword" xml:space="preserve">
+    <value>Are you sure reset the passowrd to {0}?</value>
+  </data>
+  <data name="IsSetFinish" xml:space="preserve">
+    <value>Are you sure to set the task finish?</value>
+  </data>
+  <data name="Issue" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="IssueAlreadyClaimSuccesslly" xml:space="preserve">
+    <value>Issue already claim successlly</value>
+  </data>
+  <data name="IssueAlreadySetSuccesslly" xml:space="preserve">
+    <value>Issue already set successlly</value>
+  </data>
+  <data name="IssueAlreadyTransferSuccesslly" xml:space="preserve">
+    <value>Issue successfully transferred to the project of {0}</value>
+  </data>
+  <data name="IssueAttachment" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="IssueAttachmentList" xml:space="preserve">
+    <value>Attachment List</value>
+  </data>
+  <data name="IssueClaim" xml:space="preserve">
+    <value>Claim Message</value>
+  </data>
+  <data name="IssueContent" xml:space="preserve">
+    <value>Issue Content</value>
+  </data>
+  <data name="IssueCountTotal" xml:space="preserve">
+    <value>Issue Statistic</value>
+  </data>
+  <data name="IssueDataList" xml:space="preserve">
+    <value>IssueDataList</value>
+  </data>
+  <data name="IssueDoNotBelongToTheProject" xml:space="preserve">
+    <value>Issue do not belong to the project</value>
+  </data>
+  <data name="IssueInfo" xml:space="preserve">
+    <value>Issue Status Informations</value>
+  </data>
+  <data name="IssueList" xml:space="preserve">
+    <value>IssueList</value>
+  </data>
+  <data name="IssueManagement" xml:space="preserve">
+    <value>Issues</value>
+  </data>
+  <data name="IssueNO" xml:space="preserve">
+    <value>IssueNo.</value>
+  </data>
+  <data name="IssueProcess" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="IssueRecordImport" xml:space="preserve">
+    <value>IssueRecordImport</value>
+  </data>
+  <data name="IssueReply" xml:space="preserve">
+    <value>IssueReply</value>
+  </data>
+  <data name="IssueSet" xml:space="preserve">
+    <value>Issue Settings</value>
+  </data>
+  <data name="IssueShow" xml:space="preserve">
+    <value>Issue Management</value>
+  </data>
+  <data name="IssueSpendTimeDetail" xml:space="preserve">
+    <value>Issue Particular</value>
+  </data>
+  <data name="IssueStatus" xml:space="preserve">
+    <value>Issue state</value>
+  </data>
+  <data name="IssueTag" xml:space="preserve">
+    <value>Issue tag</value>
+  </data>
+  <data name="IssueTitle" xml:space="preserve">
+    <value>Issue title</value>
+  </data>
+  <data name="IssueTransfer" xml:space="preserve">
+    <value>Transfer Follower</value>
+  </data>
+  <data name="IssueType" xml:space="preserve">
+    <value>IssueType</value>
+  </data>
+  <data name="IsTesting" xml:space="preserve">
+    <value>Ins.Test</value>
+  </data>
+  <data name="KeyWord" xml:space="preserve">
+    <value>KeyWord</value>
+  </data>
+  <data name="LastEditer" xml:space="preserve">
+    <value>LastEditer</value>
+  </data>
+  <data name="LastReplyer" xml:space="preserve">
+    <value>LastReplyer</value>
+  </data>
+  <data name="LastReplyTime" xml:space="preserve">
+    <value>LastReply</value>
+  </data>
+  <data name="Licence" xml:space="preserve">
+    <value>Licence</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="LiveDate" xml:space="preserve">
+    <value>LiveDate</value>
+  </data>
+  <data name="LocaleMaintenanceNumber" xml:space="preserve">
+    <value>LocaleServiceTime</value>
+  </data>
+  <data name="LocaleMaintenanceNumberType" xml:space="preserve">
+    <value>LocalWorkingTime</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginSystem" xml:space="preserve">
+    <value>Login System</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Malformed" xml:space="preserve">
+    <value>{0} is malformed</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="ManagementMember" xml:space="preserve">
+    <value>MemberEdit</value>
+  </data>
+  <data name="MasterManagement" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="MobileNo" xml:space="preserve">
+    <value>MobileNo</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="Modificationworkrecord" xml:space="preserve">
+    <value>ModifyTheRecord</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="MustChoseProjectFirst" xml:space="preserve">
+    <value>Please choose a project frist.</value>
+  </data>
+  <data name="MyIssue" xml:space="preserve">
+    <value>My Issues</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NewFollower" xml:space="preserve">
+    <value>NewFollower</value>
+  </data>
+  <data name="NewIssue" xml:space="preserve">
+    <value>New Issue</value>
+  </data>
+  <data name="NewIssueAssociatedWithTheProjectWithout" xml:space="preserve">
+    <value>New issue isn't need to connect to a WBS No.</value>
+  </data>
+  <data name="NewIssueNotParallelProject" xml:space="preserve">
+    <value>The issue has no connection with any project.</value>
+  </data>
+  <data name="NewReply" xml:space="preserve">
+    <value>New Reply</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoRecord" xml:space="preserve">
+    <value>There is no appropriate record.</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>{0} not found.</value>
+  </data>
+  <data name="NotNewIssueProjectWBSNoCanNotNull" xml:space="preserve">
+    <value>Please input the WBS number if the issue isn't new.</value>
+  </data>
+  <data name="NotValid" xml:space="preserve">
+    <value>{0} is not valid</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>OldPassword</value>
+  </data>
+  <data name="OldPasswordError" xml:space="preserve">
+    <value>Old password is error</value>
+  </data>
+  <data name="Once" xml:space="preserve">
+    <value>Once</value>
+  </data>
+  <data name="OpenSeeAll" xml:space="preserve">
+    <value>Scan All Replies</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="OrganizationName" xml:space="preserve">
+    <value>OrganizationName</value>
+  </data>
+  <data name="OutPut" xml:space="preserve">
+    <value>OutPut</value>
+  </data>
+  <data name="OutsourcingActualAcceptanceDate" xml:space="preserve">
+    <value>OActualAcceptance</value>
+  </data>
+  <data name="OutsourcingActualDistributionDate" xml:space="preserve">
+    <value>OActualDistribution</value>
+  </data>
+  <data name="OutsourcingAmount" xml:space="preserve">
+    <value>OutsourcingAmount</value>
+  </data>
+  <data name="OutsourcingAmountConstitute" xml:space="preserve">
+    <value>OAmountproportion</value>
+  </data>
+  <data name="OutsourcingExpectAcceptanceDate" xml:space="preserve">
+    <value>OExpectAcceptance</value>
+  </data>
+  <data name="OutsourcingExpectDistributionDate" xml:space="preserve">
+    <value>OExpectDistribution</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordResetSuccessfully" xml:space="preserve">
+    <value>Password reset successfully.</value>
+  </data>
+  <data name="Patch" xml:space="preserve">
+    <value>Patch</value>
+  </data>
+  <data name="PatchAttachment" xml:space="preserve">
+    <value>Patch</value>
+  </data>
+  <data name="PatchAttachmentList" xml:space="preserve">
+    <value>PatchAttachmentList</value>
+  </data>
+  <data name="PatchCountTotal" xml:space="preserve">
+    <value>Patch Statistic</value>
+  </data>
+  <data name="PatchDataListFilename" xml:space="preserve">
+    <value>PatchDataList.xls</value>
+  </data>
+  <data name="PatchList" xml:space="preserve">
+    <value>Patch List</value>
+  </data>
+  <data name="PatchManagement" xml:space="preserve">
+    <value>Patchs</value>
+  </data>
+  <data name="PatchName" xml:space="preserve">
+    <value>Patch Name</value>
+  </data>
+  <data name="PatchRecordImport" xml:space="preserve">
+    <value>PatchRecordImport</value>
+  </data>
+  <data name="PersonCount" xml:space="preserve">
+    <value>PersonCount</value>
+  </data>
+  <data name="PlanDate" xml:space="preserve">
+    <value>DisposeDate</value>
+  </data>
+  <data name="PlanServiceTime" xml:space="preserve">
+    <value>ServiceTime</value>
+  </data>
+  <data name="PlanServiceType" xml:space="preserve">
+    <value>ServiceType</value>
+  </data>
+  <data name="PlanServiceUserNo" xml:space="preserve">
+    <value>ServiceStaff</value>
+  </data>
+  <data name="PleaseFillComplete" xml:space="preserve">
+    <value>Please filled all password if any password textbox not empey.</value>
+  </data>
+  <data name="PleaseSelect" xml:space="preserve">
+    <value>--Please Select--</value>
+  </data>
+  <data name="PleaseSelectMember" xml:space="preserve">
+    <value>Please select member</value>
+  </data>
+  <data name="PleaseSelectTag" xml:space="preserve">
+    <value>Please select tag</value>
+  </data>
+  <data name="PleasesSelectWantPashIssue" xml:space="preserve">
+    <value>Please select the issue to be pushed</value>
+  </data>
+  <data name="Pm" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ProjectAttachment" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ProjectAttachmentList" xml:space="preserve">
+    <value>ProjectAttachmentList</value>
+  </data>
+  <data name="ProjectContractExtension" xml:space="preserve">
+    <value>Renewal</value>
+  </data>
+  <data name="ProjectContractExtensionManagement" xml:space="preserve">
+    <value>ProjectContractExtensionManagement</value>
+  </data>
+  <data name="ProjectContractSuccessfully" xml:space="preserve">
+    <value>The extension of the contract is successful.</value>
+  </data>
+  <data name="ProjectDoesNotExist" xml:space="preserve">
+    <value>Project does not exist</value>
+  </data>
+  <data name="ProjectDoNotBelongToTheCompany" xml:space="preserve">
+    <value>Project do not belong to the company</value>
+  </data>
+  <data name="ProjectGroup" xml:space="preserve">
+    <value>ProjectGroup</value>
+  </data>
+  <data name="ProjectGroupIssueList" xml:space="preserve">
+    <value>Project Group Issues</value>
+  </data>
+  <data name="ProjectManagement" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="ProjectTag" xml:space="preserve">
+    <value>Project tag</value>
+  </data>
+  <data name="ProjectTagName" xml:space="preserve">
+    <value>Project tag name</value>
+  </data>
+  <data name="PublishDate" xml:space="preserve">
+    <value>PublishDate</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="RealityDate" xml:space="preserve">
+    <value>DisposeDate</value>
+  </data>
+  <data name="RealityServiceBeginTime" xml:space="preserve">
+    <value>ServiceStartDate</value>
+  </data>
+  <data name="RealityServiceEndTime" xml:space="preserve">
+    <value>ServiceEndTime</value>
+  </data>
+  <data name="RealityServiceType" xml:space="preserve">
+    <value>ServiceType</value>
+  </data>
+  <data name="RealityServiceUserNo" xml:space="preserve">
+    <value>ServiceStaff</value>
+  </data>
+  <data name="RealityServiceUsers" xml:space="preserve">
+    <value>ServiceStaffList</value>
+  </data>
+  <data name="Record" xml:space="preserve">
+    <value>Record</value>
+  </data>
+  <data name="Remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="RemindDate" xml:space="preserve">
+    <value>RemindDate</value>
+  </data>
+  <data name="RepeatPwd" xml:space="preserve">
+    <value>RepeatPwd</value>
+  </data>
+  <data name="ReplyContent" xml:space="preserve">
+    <value>ReplyContent</value>
+  </data>
+  <data name="ReplyIssue" xml:space="preserve">
+    <value>Reply</value>
+  </data>
+  <data name="ReplySuccess" xml:space="preserve">
+    <value>The reply is successful</value>
+  </data>
+  <data name="ReplyType" xml:space="preserve">
+    <value>ReplyType</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>ResetPassword</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="Satisfaction" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchList" xml:space="preserve">
+    <value>SearchList</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SendTime" xml:space="preserve">
+    <value>SendDate</value>
+  </data>
+  <data name="ServiceLevel" xml:space="preserve">
+    <value>S.Level</value>
+  </data>
+  <data name="SetFinashSuccesslly" xml:space="preserve">
+    <value>Set the task finish successfully.</value>
+  </data>
+  <data name="SetFinish" xml:space="preserve">
+    <value>SetFinish</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>Abbreviation</value>
+  </data>
+  <data name="ShowAndReplyIssue" xml:space="preserve">
+    <value>Issue Management</value>
+  </data>
+  <data name="ShowFeedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="SiteMap" xml:space="preserve">
+    <value>Site Map</value>
+  </data>
+  <data name="SoftwereVersion" xml:space="preserve">
+    <value>SoftwareVersion</value>
+  </data>
+  <data name="Split" xml:space="preserve">
+    <value> separate with ";"</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>StartDate</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Subcontractor" xml:space="preserve">
+    <value>Subcontractor</value>
+  </data>
+  <data name="SubcontractorWindow" xml:space="preserve">
+    <value>SubcontractorWindow</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Submitters" xml:space="preserve">
+    <value>Submitter</value>
+  </data>
+  <data name="Subtotal" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+  <data name="SystemManagement" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="SystemUser" xml:space="preserve">
+    <value>SystemUser</value>
+  </data>
+  <data name="Tag" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="Tag1" xml:space="preserve">
+    <value>Tag1</value>
+  </data>
+  <data name="Tag2" xml:space="preserve">
+    <value>Tag2</value>
+  </data>
+  <data name="TagAlreadyExist" xml:space="preserve">
+    <value>This tag already exist,are you sure unite?</value>
+  </data>
+  <data name="TagPush" xml:space="preserve">
+    <value>TagPush</value>
+  </data>
+  <data name="TargetDate" xml:space="preserve">
+    <value>TargetDate</value>
+  </data>
+  <data name="TaskDate" xml:space="preserve">
+    <value>TaskDate</value>
+    <comment>任务日期</comment>
+  </data>
+  <data name="TeletPhone" xml:space="preserve">
+    <value>TeletPhone</value>
+  </data>
+  <data name="TemplateFileFormatIsNotCorrectOnlyXlsFiles" xml:space="preserve">
+    <value>Template file format is not correct,only .xls files</value>
+  </data>
+  <data name="TemplateFileIsRequired" xml:space="preserve">
+    <value>Template file is required</value>
+  </data>
+  <data name="TestingDate" xml:space="preserve">
+    <value>TestingDate</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="ToDoRecord" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="ToDoRecordAttachment" xml:space="preserve">
+    <value>ScheduleScheme</value>
+  </data>
+  <data name="ToDoRecordAttachmentList" xml:space="preserve">
+    <value>ScheduleTaskAttachmentList</value>
+  </data>
+  <data name="ToDoRecordManagement" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="ToDoRecordName" xml:space="preserve">
+    <value>SchemeName</value>
+  </data>
+  <data name="ToDoRecordStatus" xml:space="preserve">
+    <value>SchemeState</value>
+  </data>
+  <data name="ToDoScheme" xml:space="preserve">
+    <value>ScheduleScheme</value>
+  </data>
+  <data name="ToDoSchemeManagement" xml:space="preserve">
+    <value>Schedule Schemes</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TransferCase" xml:space="preserve">
+    <value>Cause</value>
+  </data>
+  <data name="TransferDate" xml:space="preserve">
+    <value>transfer time {0}</value>
+  </data>
+  <data name="TransferFollower" xml:space="preserve">
+    <value>Transfer Message</value>
+  </data>
+  <data name="TransferOfPersonnel" xml:space="preserve">
+    <value>Follower change.</value>
+  </data>
+  <data name="TravelCosts" xml:space="preserve">
+    <value>Travel Cost</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="TrueEnvironment" xml:space="preserve">
+    <value>IsLive</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UIModifyType" xml:space="preserve">
+    <value>ModifyType</value>
+  </data>
+  <data name="Unfinished" xml:space="preserve">
+    <value>Unfinished</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UploadAttachment" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="UploadDate" xml:space="preserve">
+    <value>UploadDate</value>
+  </data>
+  <data name="Uploader" xml:space="preserve">
+    <value>Uploader</value>
+  </data>
+  <data name="UploadRightModel" xml:space="preserve">
+    <value>Uploadr Right model</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserCanBeChouse" xml:space="preserve">
+    <value>Selectable Member List</value>
+  </data>
+  <data name="UserGroup" xml:space="preserve">
+    <value>User Group</value>
+  </data>
+  <data name="UserGroupManagement" xml:space="preserve">
+    <value>User Groups</value>
+  </data>
+  <data name="UserGroupManagementList" xml:space="preserve">
+    <value>Group Management List</value>
+  </data>
+  <data name="UserHomePage" xml:space="preserve">
+    <value>Home Page</value>
+    <comment>用户首页</comment>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="ValueOnlyYOrN" xml:space="preserve">
+    <value>{0} only Y or N</value>
+  </data>
+  <data name="WBSActualAcceptanceDate" xml:space="preserve">
+    <value>WBSActualAcceptance</value>
+  </data>
+  <data name="WBSExists" xml:space="preserve">
+    <value>The WBS is existing.</value>
+  </data>
+  <data name="WBSExpectAcceptanceDate" xml:space="preserve">
+    <value>WBSExpectAcceptance</value>
+  </data>
+  <data name="WbsNo" xml:space="preserve">
+    <value>WBS No.</value>
+  </data>
+  <data name="WelcomeYou" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="Window" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="WithAccessories" xml:space="preserve">
+    <value>All Attachments</value>
+  </data>
+  <data name="WorkdayDeepIntoTheMightCoefficient" xml:space="preserve">
+    <value>WeekdayMidnight</value>
+  </data>
+  <data name="WorkdayOutsideWorkingHoursCoefficient" xml:space="preserve">
+    <value>WeekdayNon-S.Time</value>
+  </data>
+  <data name="WorkdayWorkingHoursCoefficient" xml:space="preserve">
+    <value>WeekdayS.Time</value>
+  </data>
+  <data name="WorkEndDay" xml:space="preserve">
+    <value>EndDate</value>
+  </data>
+  <data name="WorkerNumber" xml:space="preserve">
+    <value>StaffNumber</value>
+  </data>
+  <data name="Workers" xml:space="preserve">
+    <value>Staffs</value>
+  </data>
+  <data name="WorkingHour" xml:space="preserve">
+    <value>Work Particular</value>
+  </data>
+  <data name="WorkingHoursSetting" xml:space="preserve">
+    <value>OccasionRateSetting</value>
+  </data>
+  <data name="WorkPatterns" xml:space="preserve">
+    <value>WorkPattern</value>
+  </data>
+  <data name="WorkShiftType" xml:space="preserve">
+    <value>OccasionType</value>
+  </data>
+  <data name="WorkSpendTimeDetail" xml:space="preserve">
+    <value>Work Particular</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="YouMustSearchByProjectFirst" xml:space="preserve">
+    <value>You must search by project first,then you can push tag to issues that you chose.</value>
+  </data>
+  <data name="IssueUndistributedProject" xml:space="preserve">
+    <value>The Issue has no connection with any project yet</value>
+    <comment>关联的问题还没有分配项目属性</comment>
+  </data>
+  <data name="LessCurrentTime" xml:space="preserve">
+    <value>LesserThanCurrentDate</value>
+    <comment>小于当前日期</comment>
+  </data>
+  <data name="UIType" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="OldPasswordCannotNull" xml:space="preserve">
+    <value>Old Password Cannot Null</value>
+  </data>
+  <data name="NewGroupToAdd" xml:space="preserve">
+    <value>AddNewGroup</value>
+  </data>
+  <data name="IssNo" xml:space="preserve">
+    <value>IssueNo.</value>
+    <comment>问题番号</comment>
+  </data>
+  <data name="ValueForYourChose" xml:space="preserve">
+    <value>Be sure the value for your chose.</value>
+    <comment>请务必保证该值为您选择的值</comment>
+  </data>
+  <data name="ProjectView" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="WorkTime" xml:space="preserve">
+    <value>WorkingTime</value>
+  </data>
+  <data name="HomeIndexMessage" xml:space="preserve">
+    <value>Hint: Unsolved Issue: {0}(New Issue: {1},New Reply: {2}). Please check and process in time.</value>
+  </data>
+  <data name="Closed" xml:space="preserve">
+    <value>Closed</value>
+    <comment>已关闭</comment>
+  </data>
+  <data name="Unclaim" xml:space="preserve">
+    <value>Unclaim</value>
+  </data>
+  <data name="Unclosed" xml:space="preserve">
+    <value>Unclosed</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="PagingSet" xml:space="preserve">
+    <value>Page Setting</value>
+  </data>
+  <data name="Prev" xml:space="preserve">
+    <value>Prev</value>
+  </data>
+  <data name="TotalData" xml:space="preserve">
+    <value>Total Data</value>
+  </data>
+  <data name="AttachmentInfo" xml:space="preserve">
+    <value>Attachments Information</value>
+  </data>
+  <data name="IssueStatistics" xml:space="preserve">
+    <value>Issue Statistics</value>
+  </data>
+  <data name="IssueTagManagement" xml:space="preserve">
+    <value>Issue Tag Management</value>
+  </data>
+  <data name="PatchSituation" xml:space="preserve">
+    <value>Patch Situation</value>
+  </data>
+  <data name="PatchStatistics" xml:space="preserve">
+    <value>Patch Statistics</value>
+  </data>
+  <data name="TheCurrentIssueSituation" xml:space="preserve">
+    <value>Issue Situation</value>
+  </data>
+  <data name="ToDoRecords" xml:space="preserve">
+    <value>Task Record</value>
+  </data>
+  <data name="ToDoSchemes" xml:space="preserve">
+    <value>Schedule Schemes</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>FRI</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>MON</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>SAT</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>SUN</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>THU</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>TUE</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>WED</value>
+  </data>
+  <data name="AccountError" xml:space="preserve">
+    <value>Account is not legal</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="WatchTime" xml:space="preserve">
+    <value>CheckDate</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Respond" xml:space="preserve">
+    <value>Respond</value>
+  </data>
+  <data name="MaintenanceWorkNumber" xml:space="preserve">
+    <value>The scene maintenance work for the human date: {0}</value>
+  </data>
+  <data name="DayOff" xml:space="preserve">
+    <value>Holiday</value>
+  </data>
+  <data name="DayOfMember" xml:space="preserve">
+    <value>Men-day</value>
+  </data>
+  <data name="FinallyWorkTime" xml:space="preserve">
+    <value>FinallyWorkTime</value>
+  </data>
+  <data name="Locale" xml:space="preserve">
+    <value>Locale</value>
+  </data>
+  <data name="OutWorkingTime" xml:space="preserve">
+    <value>Non-S.Time</value>
+  </data>
+  <data name="Remote" xml:space="preserve">
+    <value>Remote</value>
+  </data>
+  <data name="TotalWorkHour" xml:space="preserve">
+    <value>Total Hour</value>
+  </data>
+  <data name="WorkDay" xml:space="preserve">
+    <value>Weekday</value>
+  </data>
+  <data name="WorkingTime" xml:space="preserve">
+    <value>S.Time</value>
+  </data>
+  <data name="WorkingTimeDeepOff" xml:space="preserve">
+    <value>Midnight</value>
+  </data>
+  <data name="ChouseProjectFirst" xml:space="preserve">
+    <value>You must chouse project first then export excel about project. </value>
+  </data>
+  <data name="ContactManagementTitle" xml:space="preserve">
+    <value>Contacters Management</value>
+  </data>
+  <data name="CreateANewContact" xml:space="preserve">
+    <value>Create A New Contact</value>
+  </data>
+  <data name="CreateANewCustomer" xml:space="preserve">
+    <value>Create A New Customer</value>
+  </data>
+  <data name="CreateANewIssue" xml:space="preserve">
+    <value>Create A New Issue</value>
+  </data>
+  <data name="CreateANewProject" xml:space="preserve">
+    <value>Create A New Project</value>
+  </data>
+  <data name="CreateANewUser" xml:space="preserve">
+    <value>Create A New User</value>
+  </data>
+  <data name="CustomersManagementTitle" xml:space="preserve">
+    <value>Customers Management</value>
+  </data>
+  <data name="EditTheContacterInfo" xml:space="preserve">
+    <value>Edit Contacter Information</value>
+  </data>
+  <data name="EditTheCustomerInfo" xml:space="preserve">
+    <value>Edit Customer Information</value>
+  </data>
+  <data name="EditTheProject" xml:space="preserve">
+    <value>Edit Project Information</value>
+  </data>
+  <data name="EditTheUserInfo" xml:space="preserve">
+    <value>Edit User Information</value>
+  </data>
+  <data name="IssueCheck" xml:space="preserve">
+    <value>Check The Issue</value>
+  </data>
+  <data name="IssueDetail" xml:space="preserve">
+    <value>Issue Detail</value>
+  </data>
+  <data name="IssueManagementTitle" xml:space="preserve">
+    <value>Issues Maintain</value>
+  </data>
+  <data name="ProjectManagementTitle" xml:space="preserve">
+    <value>Projects Management</value>
+  </data>
+  <data name="TransferTo" xml:space="preserve">
+    <value>Transfer To</value>
+  </data>
+  <data name="UserGroupsManagementTitle" xml:space="preserve">
+    <value>User Groups Management</value>
+  </data>
+  <data name="UsersManagementTitle" xml:space="preserve">
+    <value>Users Management</value>
+  </data>
+  <data name="AllTotal" xml:space="preserve">
+    <value>Total(All)</value>
+  </data>
+  <data name="AttachementManagementTitle" xml:space="preserve">
+    <value>Attachements Management</value>
+  </data>
+  <data name="CreateANewPatch" xml:space="preserve">
+    <value>Create A New Patch</value>
+  </data>
+  <data name="CreateANewScheme" xml:space="preserve">
+    <value>Create A New Scheme</value>
+  </data>
+  <data name="DepartmentIssueTitle" xml:space="preserve">
+    <value>Department Issues Management</value>
+  </data>
+  <data name="EditPatchInfo" xml:space="preserve">
+    <value>Edit Patch Information</value>
+  </data>
+  <data name="EditSchemeInfo" xml:space="preserve">
+    <value>Edit Scheme Settings</value>
+  </data>
+  <data name="LocaleTotal" xml:space="preserve">
+    <value>Total(Locale)</value>
+  </data>
+  <data name="PatchManagementTitle" xml:space="preserve">
+    <value>Patchs Management</value>
+  </data>
+  <data name="ProjectGroupIssueTitle" xml:space="preserve">
+    <value>Project Group Issues Management</value>
+  </data>
+  <data name="RemoteTotal" xml:space="preserve">
+    <value>Total(Remote)</value>
+  </data>
+  <data name="ScheduleSchemeTitle" xml:space="preserve">
+    <value>Schedule Schemes Management</value>
+  </data>
+  <data name="TaskRecord" xml:space="preserve">
+    <value>Task Record</value>
+  </data>
+  <data name="ToDoRecordManagementTitle" xml:space="preserve">
+    <value>Tasks Management</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Transfer Follower</value>
+  </data>
+  <data name="WorkHours" xml:space="preserve">
+    <value>WorkHours</value>
+  </data>
+  <data name="Working" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="DataImportIsGoOn" xml:space="preserve">
+    <value>The same issues have been created.Are you sure to import them into the system?</value>
+  </data>
+  <data name="DataImportIssueTitle" xml:space="preserve">
+    <value>The issue "{0}" has been created.</value>
+  </data>
+  <data name="DataImportResult" xml:space="preserve">
+    <value>Import Data {0} ，Successful {1} ，Unsuccessful {2}</value>
+  </data>
+  <data name="IssueAdd" xml:space="preserve">
+    <value>Add Issue</value>
+  </data>
+  <data name="WbsNoOrName" xml:space="preserve">
+    <value>Wbs No. or Name</value>
+  </data>
+  <data name="ExportIssueDetail" xml:space="preserve">
+    <value>Export(Issue)</value>
+  </data>
+  <data name="ExportProjectDetail" xml:space="preserve">
+    <value>Export(Project)</value>
+  </data>
+  <data name="LocaleTotalHours" xml:space="preserve">
+    <value>Locale Total Hour</value>
+  </data>
+  <data name="LocaleWork" xml:space="preserve">
+    <value>Locale Work</value>
+  </data>
+  <data name="RemoteTotalHours" xml:space="preserve">
+    <value>Remote Total Hour</value>
+  </data>
+  <data name="RemoteWork" xml:space="preserve">
+    <value>Remote Work</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="FormDate" xml:space="preserve">
+    <value>Form</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="AllIssue" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="AttachementCount" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Resolved" xml:space="preserve">
+    <value>Resolved</value>
+  </data>
+  <data name="Unsolved" xml:space="preserve">
+    <value>Unsolved</value>
+  </data>
+  <data name="UsedTime" xml:space="preserve">
+    <value>Used Times</value>
+  </data>
+  <data name="StartDateFormatError" xml:space="preserve">
+    <value>{0} StartDate Format Error</value>
+  </data>
+  <data name="StartDateIsRequired" xml:space="preserve">
+    <value>{0} StartDate is required</value>
+  </data>
+  <data name="WorkerNumberFormatError" xml:space="preserve">
+    <value>{0} WorkerNumber Format Error</value>
+  </data>
+  <data name="WorkerNumberIsRequired" xml:space="preserve">
+    <value>{0} WorkerNumber is required</value>
+  </data>
+  <data name="WorkingHoursFormatError" xml:space="preserve">
+    <value>{0} WorkingHours Format Error</value>
+  </data>
+  <data name="WorkingHoursIsRequired" xml:space="preserve">
+    <value>{0} WorkingHours is required</value>
+  </data>
+  <data name="HasBeenImportSuccessfully" xml:space="preserve">
+    <value>{0} Import Successfully</value>
+  </data>
+  <data name="WorkReport" xml:space="preserve">
+    <value>Work Report</value>
+  </data>
+  <data name="FileAndIssueDiscordant" xml:space="preserve">
+    <value>This file and issue discordant.</value>
+  </data>
+  <data name="ExecDate" xml:space="preserve">
+    <value>ExecDate</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="WorkReportIsRequired" xml:space="preserve">
+    <value>The Work Report Is Required</value>
+  </data>
+  <data name="AccessoryOfWorkReport" xml:space="preserve">
+    <value>Accessory of work report</value>
+  </data>
+  <data name="UploadWorkMordel" xml:space="preserve">
+    <value>Get a model of work report</value>
+  </data>
+  <data name="WorkeReport" xml:space="preserve">
+    <value>Work Report</value>
+  </data>
+  <data name="FujitsuCustomerManagementSystemAdmin" xml:space="preserve">
+    <value>Customer Management System(Admin)</value>
+  </data>
+  <data name="PubDate" xml:space="preserve">
+    <value>Publish Date</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>NewPassword</value>
+  </data>
+  <data name="CustomerSuperintendent" xml:space="preserve">
+    <value>Customer Superintendent</value>
+  </data>
+  <data name="ServiceRange" xml:space="preserve">
+    <value>Service Range</value>
+  </data>
+  <data name="ServiceRank" xml:space="preserve">
+    <value>Service Rank</value>
+  </data>
+  <data name="FCHContractAmount" xml:space="preserve">
+    <value>FCH ContractAmount</value>
+  </data>
+  <data name="CreationDates" xml:space="preserve">
+    <value>Creation</value>
+  </data>
+  <data name="PlanGoToTime" xml:space="preserve">
+    <value>ArrivalTime</value>
+  </data>
+  <data name="TransferProject" xml:space="preserve">
+    <value>Transfer Project</value>
+  </data>
+  <data name="ExistNobutTitleIsNotTheSameProblem" xml:space="preserve">
+    <value>ExistNobutTitleIsNotTheSameProblem</value>
+  </data>
+  <data name="Urgent" xml:space="preserve">
+    <value>Urgent</value>
+  </data>
+  <data name="CustomerServiceNotProjectWindow" xml:space="preserve">
+    <value>You are not WPSNo's window can't import</value>
+  </data>
+  <data name="CustomerServiceIsNotProjectWindow" xml:space="preserve">
+    <value>You are not project's window,can not import.</value>
+  </data>
+  <data name="ContentIsNotNull" xml:space="preserve">
+    <value>The Content field is required.</value>
+  </data>
+</root>

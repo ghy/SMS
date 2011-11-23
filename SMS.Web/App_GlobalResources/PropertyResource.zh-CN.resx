@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>帐号</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="ContractAmount" xml:space="preserve">
+    <value>合同金额</value>
+  </data>
+  <data name="CustomerCompanyId" xml:space="preserve">
+    <value>客户</value>
+  </data>
+  <data name="DayOffDeepIntoTheMightCoefficient" xml:space="preserve">
+    <value>休息日深夜应对</value>
+  </data>
+  <data name="DayOffOutsideWorkingHoursCoefficient" xml:space="preserve">
+    <value>休息日标准工作时间外</value>
+  </data>
+  <data name="DayOffWorkingHoursCoefficient" xml:space="preserve">
+    <value>休息日标准工作时间</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Duty" xml:space="preserve">
+    <value>职务</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>邮箱</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>FAX</value>
+  </data>
+  <data name="FJSCContractAmount" xml:space="preserve">
+    <value>FJSC合同金额</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>公司全称</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>性别</value>
+  </data>
+  <data name="GroupId" xml:space="preserve">
+    <value>用户组</value>
+  </data>
+  <data name="Licence" xml:space="preserve">
+    <value>用户Licence数</value>
+  </data>
+  <data name="LocaleMaintenanceNumber" xml:space="preserve">
+    <value>现场维护工数</value>
+  </data>
+  <data name="MobileNo" xml:space="preserve">
+    <value>手提电话</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="OrganizationId" xml:space="preserve">
+    <value>所属公司/部门</value>
+  </data>
+  <data name="OrganizationType" xml:space="preserve">
+    <value>人员类别</value>
+  </data>
+  <data name="OutsourcingActualAcceptanceDate" xml:space="preserve">
+    <value>外包实际验收日</value>
+  </data>
+  <data name="OutsourcingActualDistributionDate" xml:space="preserve">
+    <value>外包实际发包日</value>
+  </data>
+  <data name="OutsourcingAmount" xml:space="preserve">
+    <value>外包金额</value>
+  </data>
+  <data name="OutsourcingExpectAcceptanceDate" xml:space="preserve">
+    <value>外包预定验收日</value>
+  </data>
+  <data name="OutsourcingExpectDistributionDate" xml:space="preserve">
+    <value>外包预定发包日</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>联系电话</value>
+  </data>
+  <data name="PhoneNo" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="PMId" xml:space="preserve">
+    <value>FCH负责人</value>
+  </data>
+  <data name="QQ" xml:space="preserve">
+    <value>QQ</value>
+  </data>
+  <data name="Remark" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="RepeatPwd" xml:space="preserve">
+    <value>重复密码</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>营业</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>简称</value>
+  </data>
+  <data name="SoftwereVersion" xml:space="preserve">
+    <value>版本号</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>开始日期</value>
+  </data>
+  <data name="TagName" xml:space="preserve">
+    <value>标签名</value>
+  </data>
+  <data name="WBSActualAcceptanceDate" xml:space="preserve">
+    <value>WBS实际验收日</value>
+  </data>
+  <data name="WBSExpectAcceptanceDate" xml:space="preserve">
+    <value>WBS预定验收日</value>
+  </data>
+  <data name="WindowId" xml:space="preserve">
+    <value>窗口</value>
+  </data>
+  <data name="WorkdayDeepIntoTheMightCoefficient" xml:space="preserve">
+    <value>工作日深夜应对</value>
+  </data>
+  <data name="WorkdayOutsideWorkingHoursCoefficient" xml:space="preserve">
+    <value>工作日标准工作时间外</value>
+  </data>
+  <data name="WorkdayWorkingHoursCoefficient" xml:space="preserve">
+    <value>工作日标准工作时间</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="CreationDate" xml:space="preserve">
+    <value>预定时间</value>
+  </data>
+  <data name="LastModifyUser" xml:space="preserve">
+    <value>最后修改人</value>
+  </data>
+  <data name="ExecuteDateByOnlyOn" xml:space="preserve">
+    <value>单次执行日期</value>
+  </data>
+  <data name="ExecuteDateByOnlyOne" xml:space="preserve">
+    <value>单次执行日期</value>
+  </data>
+  <data name="DepartmentId" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="NewPwd" xml:space="preserve">
+    <value>新密码</value>
+  </data>
+  <data name="ProjectId" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="PublishDate" xml:space="preserve">
+    <value>发行日</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>发行者</value>
+  </data>
+  <data name="InstallDate" xml:space="preserve">
+    <value>安装日</value>
+  </data>
+  <data name="LiveDate" xml:space="preserve">
+    <value>对应日期</value>
+  </data>
+  <data name="TestingDate" xml:space="preserve">
+    <value>对应日期</value>
+  </data>
+  <data name="CustomerId" xml:space="preserve">
+    <value>客户</value>
+  </data>
+  <data name="RemindDateType" xml:space="preserve">
+    <value>提醒日期</value>
+  </data>
+  <data name="AskerId" xml:space="preserve">
+    <value>提出者</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="ReplyDate" xml:space="preserve">
+    <value>回复日期</value>
+  </data>
+  <data name="CarbonCopyOther" xml:space="preserve">
+    <value>抄送组外成员</value>
+  </data>
+  <data name="CarbonCopyUsers" xml:space="preserve">
+    <value>抄送组成员</value>
+  </data>
+  <data name="DisposeType" xml:space="preserve">
+    <value>问题处理方式</value>
+  </data>
+  <data name="PlanDate" xml:space="preserve">
+    <value>预计对应日期</value>
+  </data>
+  <data name="PlanServiceTime" xml:space="preserve">
+    <value>预计服务时间</value>
+  </data>
+  <data name="PlanServiceType" xml:space="preserve">
+    <value>预计服务类型</value>
+  </data>
+  <data name="PlanServiceUserNo" xml:space="preserve">
+    <value>预计服务人数</value>
+  </data>
+  <data name="RealityDate" xml:space="preserve">
+    <value>实际对应日期</value>
+  </data>
+  <data name="RealityServiceBeginTime" xml:space="preserve">
+    <value>实际服务开始时间</value>
+  </data>
+  <data name="RealityServiceEndTime" xml:space="preserve">
+    <value>实际服务结束时间</value>
+  </data>
+  <data name="RealityServiceType" xml:space="preserve">
+    <value>实际服务类型</value>
+  </data>
+  <data name="RealityServiceUserNo" xml:space="preserve">
+    <value>实际服务人数</value>
+  </data>
+  <data name="RealityServiceUsers" xml:space="preserve">
+    <value>实际服务人员名单</value>
+  </data>
+  <data name="ReplyType" xml:space="preserve">
+    <value>回复类型</value>
+  </data>
+  <data name="UIModifyType" xml:space="preserve">
+    <value>变更</value>
+  </data>
+  <data name="UIType" xml:space="preserve">
+    <value>式样</value>
+  </data>
+  <data name="IssueTag" xml:space="preserve">
+    <value>问题标签</value>
+  </data>
+  <data name="Installer" xml:space="preserve">
+    <value>安装者</value>
+  </data>
+  <data name="Cause" xml:space="preserve">
+    <value>转移原因</value>
+  </data>
+  <data name="CostsRemark" xml:space="preserve">
+    <value>费用备注</value>
+  </data>
+  <data name="TravelCosts" xml:space="preserve">
+    <value>出差费用</value>
+  </data>
+  <data name="WorkerNumber" xml:space="preserve">
+    <value>工作人数</value>
+  </data>
+  <data name="Workers" xml:space="preserve">
+    <value>工作者</value>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>实际工作时长</value>
+  </data>
+  <data name="WorkPatterns" xml:space="preserve">
+    <value>工作方式</value>
+  </data>
+  <data name="WorkShiftType" xml:space="preserve">
+    <value>工作时段类型</value>
+  </data>
+  <data name="FreeWorkTime" xml:space="preserve">
+    <value>无偿对应工时</value>
+  </data>
+  <data name="ProjectView" xml:space="preserve">
+    <value>项目视图</value>
+  </data>
+  <data name="KeyWord" xml:space="preserve">
+    <value>关键字</value>
+  </data>
+  <data name="WBS" xml:space="preserve">
+    <value>WBS No</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>成本费用</value>
+  </data>
+  <data name="CustomerContactId" xml:space="preserve">
+    <value>客户负责人</value>
+  </data>
+  <data name="CarbonCopyIds" xml:space="preserve">
+    <value>抄送组成员</value>
+  </data>
+</root>

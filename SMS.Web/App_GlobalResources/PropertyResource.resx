@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AskerId" xml:space="preserve">
+    <value>Asker</value>
+  </data>
+  <data name="CarbonCopyOther" xml:space="preserve">
+    <value>OtherE-mail</value>
+  </data>
+  <data name="CarbonCopyUsers" xml:space="preserve">
+    <value>CarbonCopy</value>
+  </data>
+  <data name="Cause" xml:space="preserve">
+    <value>Cause</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="ContractAmount" xml:space="preserve">
+    <value>ContractAmount</value>
+  </data>
+  <data name="CostsRemark" xml:space="preserve">
+    <value>CostsRemark</value>
+  </data>
+  <data name="CreationDate" xml:space="preserve">
+    <value>CreationDate</value>
+  </data>
+  <data name="CustomerCompanyId" xml:space="preserve">
+    <value>CustomerCompany</value>
+  </data>
+  <data name="CustomerId" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="DayOffDeepIntoTheMightCoefficient" xml:space="preserve">
+    <value>HolidayMidnight</value>
+  </data>
+  <data name="DayOffOutsideWorkingHoursCoefficient" xml:space="preserve">
+    <value>HolidayNon-S.Time</value>
+  </data>
+  <data name="DayOffWorkingHoursCoefficient" xml:space="preserve">
+    <value>HolidayS.Time</value>
+  </data>
+  <data name="DepartmentId" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DisposeType" xml:space="preserve">
+    <value>DisposeType</value>
+  </data>
+  <data name="Duty" xml:space="preserve">
+    <value>Duty</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>EndDate</value>
+  </data>
+  <data name="ExecuteDateByOnlyOn" xml:space="preserve">
+    <value>OnceExecuteDate</value>
+  </data>
+  <data name="ExecuteDateByOnlyOne" xml:space="preserve">
+    <value>FreeTime</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="FJSCContractAmount" xml:space="preserve">
+    <value>FJSCContractAmount</value>
+  </data>
+  <data name="FreeWorkTime" xml:space="preserve">
+    <value>FreeTime</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>FullName</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="GroupId" xml:space="preserve">
+    <value>ProjectGroup</value>
+  </data>
+  <data name="InstallDate" xml:space="preserve">
+    <value>InstallDate</value>
+  </data>
+  <data name="Installer" xml:space="preserve">
+    <value>Installer</value>
+  </data>
+  <data name="IssueTag" xml:space="preserve">
+    <value>IssueTag</value>
+  </data>
+  <data name="LastModifyUser" xml:space="preserve">
+    <value>LastModifyUser</value>
+  </data>
+  <data name="Licence" xml:space="preserve">
+    <value>Licence</value>
+  </data>
+  <data name="LiveDate" xml:space="preserve">
+    <value>LiveDate</value>
+  </data>
+  <data name="LocaleMaintenanceNumber" xml:space="preserve">
+    <value>LocalWorking</value>
+  </data>
+  <data name="MobileNo" xml:space="preserve">
+    <value>MobileNo</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewPwd" xml:space="preserve">
+    <value>NewPassword</value>
+  </data>
+  <data name="OrganizationId" xml:space="preserve">
+    <value>OrganizationId</value>
+  </data>
+  <data name="OrganizationType" xml:space="preserve">
+    <value>OrganizationType</value>
+  </data>
+  <data name="OutsourcingActualAcceptanceDate" xml:space="preserve">
+    <value>OActualAcceptance</value>
+  </data>
+  <data name="OutsourcingActualDistributionDate" xml:space="preserve">
+    <value>OActualDistribution</value>
+  </data>
+  <data name="OutsourcingAmount" xml:space="preserve">
+    <value>OutsourcingAmount</value>
+  </data>
+  <data name="OutsourcingExpectAcceptanceDate" xml:space="preserve">
+    <value>OExpectAcceptance</value>
+  </data>
+  <data name="OutsourcingExpectDistributionDate" xml:space="preserve">
+    <value>OExpectDistribution</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PhoneNo" xml:space="preserve">
+    <value>PhoneNo.</value>
+  </data>
+  <data name="PlanDate" xml:space="preserve">
+    <value>PlanDate</value>
+  </data>
+  <data name="PlanServiceTime" xml:space="preserve">
+    <value>PlanServiceTime</value>
+  </data>
+  <data name="PlanServiceType" xml:space="preserve">
+    <value>PlanServiceType</value>
+  </data>
+  <data name="PlanServiceUserNo" xml:space="preserve">
+    <value>PlanServiceStaff</value>
+  </data>
+  <data name="PMId" xml:space="preserve">
+    <value>FCH Superintendent</value>
+  </data>
+  <data name="ProjectId" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="PublishDate" xml:space="preserve">
+    <value>PublishDate</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="QQ" xml:space="preserve">
+    <value>QQ</value>
+  </data>
+  <data name="RealityDate" xml:space="preserve">
+    <value>DisposeDate</value>
+  </data>
+  <data name="RealityServiceBeginTime" xml:space="preserve">
+    <value>ServiceStartTime</value>
+  </data>
+  <data name="RealityServiceEndTime" xml:space="preserve">
+    <value>ServiceEndTime</value>
+  </data>
+  <data name="RealityServiceType" xml:space="preserve">
+    <value>ServiceType</value>
+  </data>
+  <data name="RealityServiceUserNo" xml:space="preserve">
+    <value>ServiceStaff</value>
+  </data>
+  <data name="RealityServiceUsers" xml:space="preserve">
+    <value>ServiceStaffList</value>
+  </data>
+  <data name="Remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="RemindDateType" xml:space="preserve">
+    <value>RemindDateType</value>
+  </data>
+  <data name="RepeatPwd" xml:space="preserve">
+    <value>RepeatPwd</value>
+  </data>
+  <data name="ReplyDate" xml:space="preserve">
+    <value>ReplyDate</value>
+  </data>
+  <data name="ReplyType" xml:space="preserve">
+    <value>ReplyType</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>ShortName</value>
+  </data>
+  <data name="SoftwereVersion" xml:space="preserve">
+    <value>SoftwereVersion</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>StartDate</value>
+  </data>
+  <data name="TagName" xml:space="preserve">
+    <value>TagName</value>
+  </data>
+  <data name="TestingDate" xml:space="preserve">
+    <value>TestingDate</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TravelCosts" xml:space="preserve">
+    <value>TravelCosts</value>
+  </data>
+  <data name="UIModifyType" xml:space="preserve">
+    <value>ModifyType</value>
+  </data>
+  <data name="UIType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="WBSActualAcceptanceDate" xml:space="preserve">
+    <value>WBSActualAcceptance</value>
+  </data>
+  <data name="WBSExpectAcceptanceDate" xml:space="preserve">
+    <value>WBSExpectAcceptance</value>
+  </data>
+  <data name="WindowId" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="WorkdayDeepIntoTheMightCoefficient" xml:space="preserve">
+    <value>WeekdayMidnight</value>
+  </data>
+  <data name="WorkdayOutsideWorkingHoursCoefficient" xml:space="preserve">
+    <value>WeekdayNon-S.Time</value>
+  </data>
+  <data name="WorkdayWorkingHoursCoefficient" xml:space="preserve">
+    <value>WeekdayS.Time</value>
+  </data>
+  <data name="WorkerNumber" xml:space="preserve">
+    <value>StaffNumber</value>
+  </data>
+  <data name="Workers" xml:space="preserve">
+    <value>Staffs</value>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>WorkingHour</value>
+  </data>
+  <data name="WorkPatterns" xml:space="preserve">
+    <value>WorkPattern</value>
+  </data>
+  <data name="WorkShiftType" xml:space="preserve">
+    <value>OccasionType</value>
+  </data>
+  <data name="ProjectView" xml:space="preserve">
+    <value>ProjectView</value>
+  </data>
+  <data name="KeyWord" xml:space="preserve">
+    <value>KeyWord</value>
+  </data>
+  <data name="WBS" xml:space="preserve">
+    <value>WBS No</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="CustomerContactId" xml:space="preserve">
+    <value>Customer Superintendent</value>
+  </data>
+  <data name="CarbonCopyIds" xml:space="preserve">
+    <value>Carbon Copy</value>
+  </data>
+</root>

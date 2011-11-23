@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@FCSSResource.Login</title>
+    <style type="text/css">
+        
+    </style>
+    <script src="@Url.Content("~/Scripts/jquery-1.4.2.min.js") " type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.form.js") " type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.cookie.min.js") " type="text/javascript"></script>
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="@Url.Content("~/Content/Styles/share.css") " />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#LoginForm").ajaxForm({
+                dataType: "json",
+                success: function (data) {
+                    if (data.Success) {
+                        window.location.href = data.Data;
+                    } else {
+                        alert(data.ErrorMessages.join("\n") + data.ModelErrors.join("\n"));
+                    }
+                }
+            });
+
+            $(window).load(function () { windowSize(); });
+            $(window).resize(function () { windowSize(); });
+
+            function windowSize() {
+                h = $(window).height();
+                if (h > 660) {
+                    $(".top").css({ marginBottom: (h - 660) / 2 + 13 });
+                }
+
+                $("body").show();
+            }
+        });
+
+        function changeCulture(culture) {
+            $.cookie('@MvcEnvironment.CultureKey', culture, { expires: 0, path: '/' });
+            window.location.reload();
+        }
+    </script>
+</head>
+<body style="background: #F0F0F0; display: none;">
+    <div class="top" style="min-width: 960px">
+        <div>
+            <h1>
+                &nbsp;&nbsp;LK免费日语教学学院</h1>
+        </div>
+        <div class="userBox">
+            YY频道：<a href="http://yy.duowan.com/go.html#3880">3880</a>
+        </div>
+        <div class="breadNav">
+        </div>
+    </div>
+    <div class="login" style="min-width: 960px">
+        <div style="width: 1000px; margin: 0px auto">
+            <div class="loginImg" style="text-align: right; margin-right: -13px">
+                <p style="padding-top: 133px; font-size: 20px; font-weight: bold; letter-spacing: 1px">
+                    学生管理系统
+                </p>
+                <p style="color: #DFD69C;">@FCSSResource.Version：@System.Configuration.ConfigurationManager.AppSettings["Version"]</p>
+            </div>
+            <div class="advert">
+            </div>
+            <div class="loginForm">
+                @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { id = "LoginForm" }))
+                {
+                    <div style="height: 55px">
+                        <label for="Account" style="font-size: 14px; display: block; margin-bottom: 3px">
+                            @FCSSResource.Account：</label>@Html.TextBox("Account", null, new { maxlength = 50 })
+                    </div>
+                    <div style="height: 61px">
+                        <label for="Name" style="font-size: 14px; display: block; margin-bottom: 3px">
+                            @FCSSResource.Password：</label>@Html.Password("Password", null, new { maxlength = 50 })
+                    </div>
+                    <div style="">
+                        <input type="submit" class="loginBtn" value="@FCSSResource.Login" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

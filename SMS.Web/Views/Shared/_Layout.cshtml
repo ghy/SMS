@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@FCSSResource.FujitsuCustomerManagementSystem-@RenderSection("Title", required: false)
+    </title>
+    @{
+        Html.RenderPartial("Dependencies");
+        var UserInfo = ViewData[MvcEnvironment.MasterViewKey] as FCSS.Services.Management.Auth.MasterInfoView;
+    }
+    @if (false)
+    {
+        <script src="../../Scripts/jquery-1.6.1-vsdoc.js" type="text/javascript"></script>
+    }
+    @RenderSection("SiteHead", false)
+</head>
+<body style="display: none;">
+    <div class="top">
+        <div class="logo">
+        </div>
+        <div class="userBox">
+            <img src="../../Content/Images/user_header.png" style="vertical-align: text-bottom;
+                margin-right: 2px;" />
+            @FCSSResource.WelcomeYou, @Html.ActionLink(UserInfo.Name, "Edit", "Profile", null, new { style = "color:white" })
+            | @Html.ChangeCultureLink("中文", "zh-CN", new
+         {
+             @class = "zh-cn-link"
+         }) | @Html.ChangeCultureLink("English", "en-US",
+            new
+            {
+                @class = "en-us-link"
+            })
+            | @Html.ActionLink(FCSSResource.Logout, "Logout", "Auth")
+        </div>
+        <div class="breadNav">
+            @FCSSResource.SiteMap：@Html.ActionLink(FCSSResource.Home, string.Empty, string.Empty)
+            &gt;&gt; @RenderSection("SiteMap", false)
+        </div>
+    </div>
+    <div class="mainbody">
+        <table class="tContainer" border="0px" align="center" style="width: 98%; border-collapse: collapse;
+            margin: 0px auto; position: relative; display: block; min-width: 975px;">
+            <tr>
+                <td class="hideNav" rowspan="5" valign="top" style="width: 160px;">
+                    @{
+                        Html.RenderPartial("Nav", UserInfo);
+                    }
+                    <div style="width: 160px; height: 1px;">
+                    </div>
+                </td>
+                <td class="sideBarContainer" rowspan="5" style="width: 12px;" valign="top">
+                    <div class="hideNavBar navBarHide">
+                    </div>
+                </td>
+                <td colspan="2" valign="top" style="height: 38px;">
+                    <div class="articleTitle">
+                        <div class="bg">
+                            <div style="width: 790px; font-size: 15px; color: infobackground;">
+                                @RenderSection("SitePageName", false)
+                            </div>
+                        </div>
+                        <div class="lt">
+                            &nbsp;</div>
+                        <div class="rt">
+                            &nbsp;</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="articleLt" style="padding: 0px;">
+                    <div class="articleRt" style="padding: 0px; background-color: transparent">@Html.ValidationMsg("ValidationMsg")
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" class="articleLt" width="10000px;">
+                    <div style="min-height: 491px">
+                        @RenderBody()
+                    </div>
+                </td>
+                <td valign="top" class="articleRt">
+                    @RenderSection("SiteIssueRightInfo", false)
+                </td>
+            </tr>
+            @RenderSection("SiteJobTime", false)
+            <tr>
+                <td colspan="2">
+                    <div class="articleFloor">
+                        <div class="bg">
+                        </div>
+                        <div class="lt">
+                            &nbsp;</div>
+                        <div class="rt">
+                            &nbsp;</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="floorTop">
+            <marquee behavior="scroll" direction="left" style="padding-top: 20px; margin: 0px 15px"
+                loop="-1" scrollamount="2" scrolldelay="0" onmouseout="this.start()" onmouseover="this.stop()">
+        @System.Configuration.ConfigurationManager.AppSettings["RollingInformation"]
+        </marquee>
+        </div>
+        <div class="floorText">
+            <p>
+                <a target="_blank" href="http://www.fujitsu.com/cn/">关于富士通</a> 
+                | <a target="_blank" href="http://www.fujitsu.com/cn/services/">富士通产品</a> 
+                | <a class="serviceLink" href="javascript:void(0)">客服中心</a> 
+            </p>
+            <p>
+                Copyright © 2011-2011 Fujitsu. All Rights Reserved. 粤ICP备09151272号-4</p>
+        </div>
+        <div class="service" style="display:none; overflow-y:hidden"">
+            <table>
+                <tr>
+                    <th style="width:405px;">广州富士通办事处地图</th>
+                    <th>广州富士通各种产品的联络方法</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">
+                        @Html.Image("map.jpg")
+                    </td>
+                    <td valign="top">
+                        <p>联系方式：富士通(中国)信息系统有限公司 广州分公司</p>
+                        <p>地址：广州市天河北路28号　时代广场中座1103室</p>
+                        <p>邮编：510620</p>
+                        <p>联系电话：+86-20-6684-1888</p>
+                        <p>传真号码：+86-20-6684-1881</p>
+                        <p>联系电邮：FCSS@homs-fujitsu.com </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
