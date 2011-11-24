@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Youmay.Web;
+using SMS.Services;
+using SMS.Services.Auth;
 
 namespace SMS.Web.Common
 {
@@ -16,9 +18,9 @@ namespace SMS.Web.Common
             {
                 if (filterContext.HttpContext.User.Identity.IsAuthenticated)
                 {
-                    //var authLogic = DependencyResolver.Current.GetService<IAuthLogic>();
-                    //var masterInfo = authLogic.GetMasterInfo(int.Parse(filterContext.HttpContext.User.Identity.Name));
-                    //viewResult.ViewData[MvcEnvironment.MasterViewKey] = masterInfo;
+                    var queries = DependencyResolver.Current.GetService<Repository>();
+                    var masterInfo = queries.GetMasterInfo(int.Parse(filterContext.HttpContext.User.Identity.Name));
+                    viewResult.ViewData[MvcEnvironment.MasterViewKey] = masterInfo;
                 }
             }
         }

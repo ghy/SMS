@@ -5,7 +5,7 @@
     </title>
     @{
         Html.RenderPartial("Dependencies");
-        var UserInfo = ViewData[MvcEnvironment.MasterViewKey] as FCSS.Services.Management.Auth.MasterInfoView;
+        var UserInfo = ViewData[MvcEnvironment.MasterViewKey] as SMS.Services.Auth.MasterInfoView;
     }
     @if (false)
     {
@@ -15,23 +15,16 @@
 </head>
 <body style="display: none;">
     <div class="top">
-        <div class="logo">
+        <div > <h1>
+                &nbsp;&nbsp;LK免费日语教学学院</h1>
         </div>
         <div class="userBox">
             <img src="../../Content/Images/user_header.png" style="vertical-align: text-bottom;
                 margin-right: 2px;" />
             @FCSSResource.WelcomeYou, @Html.ActionLink(UserInfo.Name, "Edit", "Profile", null, new { style = "color:white" })
-            | @Html.ChangeCultureLink("中文", "zh-CN", new
-         {
-             @class = "zh-cn-link"
-         }) | @Html.ChangeCultureLink("English", "en-US",
-            new
-            {
-                @class = "en-us-link"
-            })
-            | @Html.ActionLink(FCSSResource.Logout, "Logout", "Auth")
+            |  @Html.ActionLink(FCSSResource.Logout, "Logout", "Auth")
         </div>
-        <div class="breadNav">
+        <div style="padding-top:20px" class="breadNav">
             @FCSSResource.SiteMap：@Html.ActionLink(FCSSResource.Home, string.Empty, string.Empty)
             &gt;&gt; @RenderSection("SiteMap", false)
         </div>

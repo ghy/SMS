@@ -7,5 +7,9 @@ namespace SMS.Services.Entities
 {
     public class Teacher : AccountInfo
     {
+        public virtual Class Classes { get; set; }
+
+        public virtual Lesson Lessones { get; set; }
+
     }
 }

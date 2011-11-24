@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate.Tool.hbm2ddl;
+using SMS.Services.Entities;
 
 namespace SMS.Services.Test
 {
@@ -63,6 +64,43 @@ namespace SMS.Services.Test
         {
             var export = new SchemaExport(HibernateUtils.Configuration);
             export.Execute(true, true, false);
+            DataInit();
+        }
+
+
+        [TestMethod]
+        public void DataInit()
+        {
+            using (var _session = HibernateUtils.SessionFactory.OpenSession())
+            {
+                try
+                {
+                    _session.Transaction.Begin();
+                    Administrator adm = new Administrator()
+                    {
+                        Account = "admin",
+                        Password = "8888",
+                        Status = Enum.UserStatus.Enable,
+                        Name = "管理员",
+                        CreationDateTime = DateTime.Now,
+                        Role = Enum.Role.Admin,
+                        Gender = Enum.Gender.Male
+                    };
+
+
+                    _session.Save(adm);
+
+
+                    _session.Transaction.Commit();
+                }
+                catch (Exception e)
+                {
+                    var msg = e.Message;
+                    _session.Transaction.Rollback();
+                    throw e;
+
+                }
+            }
         }
     }
 }

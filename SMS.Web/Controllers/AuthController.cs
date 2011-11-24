@@ -47,7 +47,7 @@ namespace SMS.Web.Controllers
 
                     formsAuth.SignIn(userId.ToString(), false);
 
-                    return RedirectToAction("index", "home");
+                    return RedirectToAction("Index", "home");
                 }
                 catch (LoginException le)
                 {
@@ -62,7 +62,7 @@ namespace SMS.Web.Controllers
                     }
                 }
             }
-            return View();
+            return AjaxJson();
         }
 
         public ActionResult Logout()

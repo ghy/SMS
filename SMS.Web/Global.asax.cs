@@ -129,7 +129,7 @@ namespace SMS.Web
             //    "Dimension",
             //    AdminResources.ResourceManager);
             rules.MapRule(
-                "SMS.Web.HMCI.Models",
+                "SMS.Web.Models",
                 ResourceKeyHelper.FindFunctionAfterStringModels,
                 PropertyResource.ResourceManager);
         }
