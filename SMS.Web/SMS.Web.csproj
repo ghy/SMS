@@ -39,15 +39,6 @@
       <HintPath>..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="eWebEditorAdmin">
-      <HintPath>..\packages\eWebEditor.7.3.4069.36594\lib\eWebEditorAdmin.dll</HintPath>
-    </Reference>
-    <Reference Include="eWebEditorControl">
-      <HintPath>..\packages\eWebEditor.7.3.4069.36594\lib\eWebEditorControl.dll</HintPath>
-    </Reference>
-    <Reference Include="eWebEditorServer">
-      <HintPath>..\packages\eWebEditor.7.3.4069.36594\lib\eWebEditorServer.dll</HintPath>
-    </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\packages\Iesi.Collections.3.2.0.2001\lib\Net35\Iesi.Collections.dll</HintPath>
       <Private>True</Private>
@@ -98,13 +89,13 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Youmay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Youmay">
       <HintPath>..\packages\Youmay.1.0.0.34\lib\Youmay.dll</HintPath>
     </Reference>
-    <Reference Include="Youmay.Services, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Youmay.Services">
       <HintPath>..\packages\Youmay.Services.1.0.0.34\lib\Youmay.Services.dll</HintPath>
     </Reference>
-    <Reference Include="Youmay.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Youmay.Web">
       <HintPath>..\packages\Youmay.Web.1.0.0.34\lib\Youmay.Web.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -1893,6 +1884,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PreBuildEvent>"nuget" install "$(ProjectDir)packages.config" -o "$(ProjectDir)..\packages"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>

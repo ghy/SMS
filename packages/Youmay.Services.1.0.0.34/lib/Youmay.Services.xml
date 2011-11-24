@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Youmay.Services</name>
+    </assembly>
+    <members>
+        <member name="F:Youmay.Services.Extensions.IQueryableExtensions.SupportedMethodList">
+            <summary>
+            支持的方法列表
+            </summary>
+        </member>
+        <member name="M:Youmay.Services.Extensions.IQueryableExtensions.resolveAllPredicate(System.Collections.ObjectModel.ReadOnlyCollection{System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.Expression)">
+            <summary>
+            递归解析整个条件表达式
+            </summary>
+            <param name="parameters">最外层表达式参数</param>
+            <param name="exp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Youmay.Services.Extensions.IQueryableExtensions.WhereTrue``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            能够解释All和Any的Where
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Youmay.Services.Extensions.IQueryableExtensions.getExpressionValue(System.Linq.Expressions.MethodCallExpression)">
+            <summary>
+            获得表达式的值
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Youmay.Services.Extensions.IQueryableExtensions.WhereNotIn``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IEnumerable{``1})">
+            <summary>
+            不在集合中的元素
+            </summary>
+            <typeparam name="TElement"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="source"></param>
+            <param name="propertySelector"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Youmay.Services.Extensions.IQueryableExtensions.WhereIn``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IEnumerable{``1})">
+            <summary>
+            在集合中的元素
+            </summary>
+            <typeparam name="TElement"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="source"></param>
+            <param name="propertySelector"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Youmay.Services.Extensions.OrderAgent`2.OrderBySortDirection``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            按当前Condition对应的方向进行排序
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <param name="keySelector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Youmay.Services.Utils.FileSchemer.GetFile(System.String)">
+            <summary>
+            获取文件
+            </summary>
+            <param name="fileName">文件的绝对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Youmay.Services.Utils.FileSchemer.Upload(System.IO.Stream,System.String,System.String)">
+            <summary>
+            本地目录上传
+            </summary>
+            <param name="stream"></param>
+            <param name="uploadPath">保存的路径,格式:FILE "file:\\c:\fcssUpload"</param>
+            <param name="fileName">文件名</param>
+        </member>
+        <member name="M:Youmay.Services.Utils.FileUtils.GetFile(System.String)">
+            <summary>
+            获取文件
+            </summary>
+            <param name="subPath">文件保存路径（包含文件名）</param>
+            <returns>文件流</returns>
+        </member>
+        <member name="M:Youmay.Services.Utils.FileUtils.UploadFile(System.IO.Stream,System.String,System.String)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="stream"></param>
+            <param name="uploadPath">保存的路径,格式:FILE "file:\\c:\fcssUpload",FTP "ftp://st002"</param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Youmay.Services.Utils.FileUtils.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="fileName">文件完整路径</param>
+        </member>
+        <member name="M:Youmay.Services.Utils.FileUtils.GetUniqueFileName(System.String)">
+            <summary>
+            获取唯一的文件名
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Youmay.Services.Utils.LogicUtils">
+            <summary>
+            逻辑工具类
+            </summary>
+        </member>
+        <member name="M:Youmay.Services.Utils.LogicUtils.NotNull``1(``0)">
+            <summary>
+            判断对象实例是否为空,是则抛出异常
+            </summary>
+            <param name="obj">对象</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:Youmay.Services.Utils.LogicUtils.NotNull``1(``0,System.String)">
+            <summary>
+            判断对象实例是否为空,是则抛出异常
+            </summary>
+            <param name="obj">对象</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:Youmay.Services.Utils.LogicUtils.CopyStream(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            将数据流写入到文件
+            </summary>
+            <param name="stream">文件数据流</param>
+            <param name="fs">写入文件的数据流</param>
+        </member>
+        <member name="M:Youmay.Services.Utils.LogicUtils.ConvertIntToEnum``1(System.Int32)">
+            <summary>
+            将整型值转换成对应的枚举值
+            </summary>
+            <typeparam name="T">枚举泛型</typeparam>
+            <param name="value">整型值</param>
+            <returns>枚举</returns>
+        </member>
+        <member name="M:Youmay.Services.Utils.LogicUtils.GetWeekFirstDate(System.DateTime)">
+            <summary>
+            获取指定日期所在星期的第一天
+            </summary>
+            <param name="date">日期对象</param>
+            <returns>日期</returns>
+        </member>
+        <member name="M:Youmay.Services.Utils.LogicUtils.GetMonthOfWeek(System.DateTime)">
+            <summary>
+            获取指定日期是所在月份的第几周
+            </summary>
+            <returns>周数（1表示第1周，以似类推）</returns>
+        </member>
+    </members>
+</doc>

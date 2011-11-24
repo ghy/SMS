@@ -49,7 +49,6 @@ Target/
 
 # Project Ignore
 db/liquibase.properties
-packages/
 db/changelog/diff-changelog.xml
 db/diff.bat
 logs/
