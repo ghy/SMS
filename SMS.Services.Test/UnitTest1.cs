@@ -9,7 +9,7 @@ using SMS.Services.Entities;
 namespace SMS.Services.Test
 {
     /// <summary>
-    /// UnitTest1 的摘要说明
+    /// UnitTest1 的摘要说明3
     /// </summary>
     [TestClass]
     public class UnitTest1
