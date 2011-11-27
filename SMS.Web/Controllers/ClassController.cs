@@ -3,68 +3,56 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SMS.Web.Common;
+using SMS.Web.Models.Class;
 using SMS.Services;
 using SMS.Web.Models;
-using SMS.Services.StudentManagement;
-using SMS.Web.Models.Student;
-using Youmay.Exceptions;
+using SMS.Services.Common;
 using Youmay.Web;
+using SMS.Web.Common;
+using Youmay.Exceptions;
+using SMS.Services.ClassManagement;
 using SMS.Services.Enum;
 using Youmay.Paging;
 using Youmay.Enums;
-using SMS.Services.Common;
 
 namespace SMS.Web.Controllers
 {
-    public class StudentController : ManagementController
+    public class ClassController : ManagementController
     {
         private Repository repository;
         private ProcessorManager manager;
 
-        public StudentController(Repository repository, ProcessorManager manager)
+        public ClassController(Repository repository, ProcessorManager manager)
         {
             this.repository = repository;
             this.manager = manager;
         }
 
-
         public ActionResult Index(IndexForm form)
         {
             if (ModelState.IsValid)
             {
-                form.SortConditions = new[]{new SortCondition<StudentSortType>()
+                form.SortConditions = new[]{
+                                        new SortCondition<ClassSortType>
                                         {
-                                            SortType=StudentSortType.Status,
-                                            SortDirection=SortDirection.Ascending
-                                        },
-                                        new SortCondition<StudentSortType>
-                                        {
-                                            SortType=StudentSortType.CreationDateTime,
+                                            SortType=ClassSortType.CreateDateTime,
                                             SortDirection = SortDirection.Descending
                                         }};
 
-                var users = manager.Create<ListStudentProcessor>().Execute(ConvertTo<ListStudentParameters>(form));
+                var cls = manager.Create<ListClassProcessor>().Execute(ConvertTo<ListClassParameters>(form));
 
-                return View(new IndexViewModel(users, form)
-                {
-                    IsSearch = true,
-                });
+                return View(new IndexViewModel(cls, form));
             }
             return View(
                new IndexViewModel(
-               Empty<StudentListView>.Pagination, form)
-               {
-                   IsSearch = true,
-               });
+               Empty<ClassListView>.Pagination, form));
         }
 
         public ActionResult Create()
         {
             return View(new CreateViewModel()
             {
-                Genders = I18NUtils.SelectList(typeof(Gender)),
-                Classes = repository.ListClass().ToSelectList()
+                Teachers = repository.ListTeacher().ToSelectList()
             });
         }
 
@@ -75,10 +63,10 @@ namespace SMS.Web.Controllers
             {
                 try
                 {
-                    var processor = manager.Create<AddStudentProcessor>();
-                    processor.Execute(ConvertTo<StudentAddView>(form));
+                    var processor = manager.Create<AddClassProcessor>();
+                    processor.Execute(ConvertTo<ClassAddView>(form));
 
-                    TempSuccessMessage("学生添加成功");
+                    TempSuccessMessage("班级添加成功");
                     //if (isContinue.HasValue)
                     //    return RedirectToAction("Add");
                     return RedirectToAction("Index");
@@ -91,6 +79,8 @@ namespace SMS.Web.Controllers
 
             return Create();
         }
+
+
 
     }
 }

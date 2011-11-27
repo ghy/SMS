@@ -1,0 +1,58 @@
+﻿@model SMS.Web.Models.Class.CreateViewModel
+@{
+    ViewBag.Title = "Create";
+}
+@section Title{
+    @FCSSResource.CreateANewUser
+}
+@section SiteMap{
+    @FCSSResource.MasterManagement &gt;&gt; @FCSSResource.UserManagement
+}
+@section SitePageName{
+添加班级
+}
+@section SiteHead{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#OrganizationType").cascade({
+                dataType: "json",
+                baseUrl: '@Url.Action("SelectChange")?type=',
+                target: "#OrganizationId",
+                textKey: 'Name',
+                valueKey: 'Id'
+            });
+
+            dependShow("#OrganizationType", "#RoleGroup", function (trigger, target) {
+                return trigger.val() == 0;
+            });
+
+        });
+    </script>
+}
+<div class="context">
+    @using (Html.BeginForm("Create", "Class", FormMethod.Post, new { id = "CreateForm" }))
+    {
+        <fieldset class="form-layout twoCol">
+            <div class="required">
+                <label for="Name">
+                    名称：</label>
+                @Html.TextBox("Name", null)
+            </div>
+            <div class="required">
+                <label for="TeacherId">
+                    老师：</label>
+                @Html.DropDownList("TeacherId", Model.Teachers, FCSSResource.PleaseSelect)
+            </div>
+            <div class="custom">
+                <label for="Remark" style="line-height: 100px">
+                    备注：</label>
+                @Html.TextArea("Remark", new { @style = "height:96px;width:600px" })
+            </div>
+            <div class="buttonRow">
+                <input type="submit" value="@FCSSResource.Save" />
+                <input class="btnContinueCreate" type="button" value="@FCSSResource.ContinueAdd" />
+                @Html.LinkButton(FCSSResource.Return, Url.Action("Index", "Class"))
+            </div>
+        </fieldset>    
+    }
+</div>

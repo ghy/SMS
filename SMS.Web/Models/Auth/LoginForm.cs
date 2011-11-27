@@ -21,5 +21,7 @@ namespace SMS.Web.Models.Auth
         [Required]
         [StringLength(50)]
         public string Password { get; set; }
+
+        public string ReturnUrl { get; set; }
     }
 }

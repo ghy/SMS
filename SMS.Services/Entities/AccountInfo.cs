@@ -16,6 +16,9 @@ namespace SMS.Services.Entities
         public virtual string Password { get; set; }//密码
         public virtual UserStatus Status { get; set; }//状态
         public virtual Gender Gender { get; set; }//性别
+        public virtual string PhoneNo { get; set; }
         public virtual Role Role { get; set; }
+        public virtual string Email { get; set; }
+        public virtual string Remark { get; set; }
     }
 }

@@ -1,6 +1,120 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@using System.Linq;
+@model SMS.Web.Models.Student.IndexViewModel
+@section Title{
+    @FCSSResource.UsersManagementTitle
 }
-
-<h2>Index</h2>
-
+@section SiteHead{
+}
+@section SiteMap{
+    @FCSSResource.MasterManagement &gt;&gt; @FCSSResource.UserManagement
+}
+@section SitePageName{
+    @FCSSResource.UsersManagementTitle
+}
+<div class="header searchHeader">
+    <span></span><b></b>
+</div>
+<div class="context">
+    @using (Html.BeginForm("Index", "User", FormMethod.Get))
+    {
+        <fieldset class="form-layout twoCol hideItem">
+            <div class=" ">
+                <label for="Account">
+                    @FCSSResource.Account：</label>
+                @Html.TextBox("Account", null, new { maxlength = 50 })
+            </div>
+            <div class=" ">
+                <label for="Name">
+                    @FCSSResource.Name：</label>
+                @Html.TextBox("Name", null, new { maxlength = 50 })
+            </div>
+            <div class="oneRow">
+                <label for="Email">
+                    Email：</label>
+                @Html.TextBox("Email", null, new { maxlength = 50 })
+            </div>
+            <div class="buttonRow">
+                <input type="submit" value="@FCSSResource.Search" />
+                @Html.LinkButton(FCSSResource.Add, Url.Action("Create", "Student"))
+            </div>
+        </fieldset>
+    }
+    @if (Model.Count == 0)
+    {
+        @Html.NoRecord()
+    }
+    else
+    {
+        <table border="0px" bordercolor="#eaeaea" class="dataTable">
+            <tr>
+                <th style="width: 12%">
+                    @FCSSResource.Account
+                </th>
+                <th style="width: 10%">
+                    @FCSSResource.Name
+                </th>
+                <th style="width: 19%">
+                    Email
+                </th>
+                <th style="width: 10%">
+                    @FCSSResource.TeletPhone
+                </th>
+                <th>
+                    所在班级
+                </th>
+                <th style="width: 7%">
+                    @FCSSResource.State
+                </th>
+                <th style="width: 6%;">
+                    @FCSSResource.Operation
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Account, "Edit", "User", new { id = item.Id }, null)
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Email
+                    </td>
+                    <td>
+                        @item.PhoneNo
+                    </td>
+                    <td>
+                        @string.Join(";", item.Classes.Select(c => c.Name))
+                    </td>
+                    <td align="center">
+                        @if (item.Status == SMS.Services.Enum.UserStatus.Enable)
+                        {
+                            <span>@FCSSResource.Enable</span>
+                        }
+                        else
+                        {
+                            <span style="color: red">@FCSSResource.Disable</span>
+                        }
+                    </td>
+                    <td>
+                        @if (item.Status == SMS.Services.Enum.UserStatus.Enable)
+                        {
+                            @Html.PostActionLink(" ", Url.Action("Disable", new { id = item.Id }), new { @class = "disable", title = FCSSResource.Disable }, FCSSResource.IsDisable);
+                        }
+                        else
+                        {
+                            @Html.PostActionLink(" ", Url.Action("Enable", new { id = item.Id }), new { @class = "opening", title = FCSSResource.Enable }, FCSSResource.IsEnable);
+                        }
+                        @Html.PostActionLink(" ", Url.Action("ResetPassword", new { id = item.Id }), new { @class = "reset", title = FCSSResource.ResetPassword }, string.Format(FCSSResource.IsResetPassword, "3880"))
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="7">
+                    @Html.Pagination()
+                </td>
+            </tr>
+        </table>
+    }
+</div>

@@ -12,6 +12,8 @@ namespace SMS.Services.Entities
         public virtual AccountInfo Creator { get; set; }//创建者
         public virtual DateTime CreationDateTime { get; set; }//创建时间
 
+        public virtual string Remark { get; set; }
+
         /// <summary>
         /// 班主任
         /// </summary>

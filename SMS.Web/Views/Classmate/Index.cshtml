@@ -1,0 +1,55 @@
+﻿@model SMS.Web.Models.Classmate.IndexViewModel
+@section Title{
+同学录
+}
+@section SiteHead{
+}
+@section SiteMap{
+&gt;&gt; 同学录
+}
+@section SitePageName{
+同学录
+}
+<div class="context">
+    @if (Model.Classmates.Count == 0)
+    {
+        @Html.NoRecord()
+    }
+    else
+    {
+        <table border="0px" bordercolor="#eaeaea" class="dataTable">
+            @for (int i = 0; i < Model.Classmates.Count; i = i + 2)
+            {
+                int start = i;
+                <tr>
+                    <td>
+                        学号
+                    </td>
+                    <td>
+                        @(start + 1)
+                    </td>
+                    <td>
+                        @if (start + 1 < Model.Classmates.Count )
+                        {
+                            @(start + 2)
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        姓名
+                    </td>
+                    <td>
+                        @Model.Classmates[start].Name
+                    </td>
+                    <td>
+                        @if (start + 1 < Model.Classmates.Count)
+                        {
+                            @Model.Classmates[start + 1].Name
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+</div>

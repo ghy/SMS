@@ -55,6 +55,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Youmay">
+      <HintPath>..\packages\Youmay.1.0.0.34\lib\Youmay.dll</HintPath>
+    </Reference>
     <Reference Include="Youmay.Services">
       <HintPath>..\packages\Youmay.Services.1.0.0.34\lib\Youmay.Services.dll</HintPath>
     </Reference>
@@ -67,23 +70,50 @@
     <Compile Include="Auth\MasterInfoView.cs" />
     <Compile Include="Auth\OldPasswordErrorException.cs" />
     <Compile Include="Auth\UserLoginView.cs" />
+    <Compile Include="ClassLessonManagement\ClassLessonListView.cs" />
+    <Compile Include="ClassLessonManagement\ListClassLessonProcessor.cs" />
+    <Compile Include="ClassManagement\AddClassProcessor.cs" />
+    <Compile Include="ClassManagement\ClassAddView.cs" />
+    <Compile Include="ClassManagement\ClassListView.cs" />
+    <Compile Include="ClassManagement\ListClassParameters.cs" />
+    <Compile Include="ClassManagement\ListClassProcessor.cs" />
+    <Compile Include="ClassmateManagement\ClassmateListView.cs" />
+    <Compile Include="Common\CommonQueries.cs" />
     <Compile Include="Entities\AccountInfo.cs" />
     <Compile Include="Entities\Administrator.cs" />
     <Compile Include="Entities\Attendance.cs" />
     <Compile Include="Entities\Class.cs" />
     <Compile Include="Entities\Lesson.cs" />
+    <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Teacher.cs" />
+    <Compile Include="Enum\ClassSortType.cs" />
     <Compile Include="Enum\Gender.cs" />
+    <Compile Include="Enum\LessonSortType.cs" />
+    <Compile Include="Enum\LessonType.cs" />
     <Compile Include="Enum\LoginFailType.cs" />
     <Compile Include="Enum\Role.cs" />
+    <Compile Include="Enum\SchoolBook.cs" />
+    <Compile Include="Enum\StudentSortType.cs" />
     <Compile Include="Enum\UserStatus.cs" />
     <Compile Include="ExecuteContext.cs" />
+    <Compile Include="LessonManagement\AddLessonProcessor.cs" />
+    <Compile Include="LessonManagement\LessonAddView.cs" />
+    <Compile Include="LessonManagement\LessonListView.cs" />
+    <Compile Include="LessonManagement\ListLessonParameters.cs" />
+    <Compile Include="LessonManagement\ListLessonProcessor.cs" />
     <Compile Include="Mapping\MappingFactory.cs" />
+    <Compile Include="ClassmateManagement\ListClassmateProcessor.cs" />
     <Compile Include="OperatorInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryContext.cs" />
     <Compile Include="Repository.cs" />
+    <Compile Include="StudentManagement\AddStudentProcessor.cs" />
+    <Compile Include="StudentManagement\ListStudentParameters.cs" />
+    <Compile Include="StudentManagement\ListStudentProcessor.cs" />
+    <Compile Include="StudentManagement\StudentAddView.cs" />
+    <Compile Include="StudentManagement\StudentListView.cs" />
+    <Compile Include="TransactionExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -157,13 +157,31 @@
     <Compile Include="Common\ManagementController.cs" />
     <Compile Include="Common\MasterInfo.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ClassController.cs" />
+    <Compile Include="Controllers\ClassLessonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LessonController.cs" />
+    <Compile Include="Controllers\ClassmateController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Auth\LoginForm.cs" />
+    <Compile Include="Models\ClassLesson\IndexViewModel.cs" />
+    <Compile Include="Models\Class\CreateForm.cs" />
+    <Compile Include="Models\Class\CreateViewModel.cs" />
+    <Compile Include="Models\Class\IndexForm.cs" />
+    <Compile Include="Models\Class\IndexViewModel.cs" />
+    <Compile Include="Models\Lesson\CreateForm.cs" />
+    <Compile Include="Models\Lesson\CreateViewModel.cs" />
+    <Compile Include="Models\Lesson\IndexForm.cs" />
+    <Compile Include="Models\Lesson\IndexViewModel.cs" />
+    <Compile Include="Models\Classmate\IndexViewModel.cs" />
     <Compile Include="Models\ProcessorManager.cs" />
+    <Compile Include="Models\Student\CreateForm.cs" />
+    <Compile Include="Models\Student\CreateViewModel.cs" />
+    <Compile Include="Models\Student\IndexForm.cs" />
+    <Compile Include="Models\Student\IndexViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1841,6 +1859,12 @@
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Class\Create.cshtml" />
+    <Content Include="Views\Class\Index.cshtml" />
+    <Content Include="Views\Lesson\Create.cshtml" />
+    <Content Include="Views\Classmate\Index.cshtml" />
+    <Content Include="Views\ClassLesson\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SMS.Services\SMS.Services.csproj">

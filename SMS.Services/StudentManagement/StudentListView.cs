@@ -5,14 +5,26 @@ using System.Text;
 using SMS.Services.Enum;
 using Youmay;
 
-namespace SMS.Services.Auth
+namespace SMS.Services.StudentManagement
 {
-    public class MasterInfoView
+    public class StudentListView
     {
         public int Id { get; set; }
+
         public string Account { get; set; }
+
         public string Name { get; set; }
-        public Role Role { get; set; }
+
+        public Gender Gender { get; set; }
+
+        public UserStatus Status { get; set; }
+
+        public string Email { get; set; }
+
+        public string PhoneNo { get; set; }
+
+        public string Remark { get; set; }
+
         public List<NameIdView> Classes { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SMS.Services.Entities;
 using Youmay.Services.Utils;
+using Youmay;
 
 namespace SMS.Services.Auth
 {
@@ -20,6 +21,13 @@ namespace SMS.Services.Auth
                 Name = user.Name,
                 Role = user.Role,
             };
+
+            var student = user as Student;
+
+            if (student != null)
+            {
+                master.Classes = student.Classes.Select(item => new NameIdView(item.Id, item.Name)).ToList();
+            }
 
             return master;
         }

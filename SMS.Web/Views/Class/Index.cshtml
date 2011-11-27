@@ -1,0 +1,71 @@
+﻿@using System.Linq;
+@model SMS.Web.Models.Class.IndexViewModel
+@section Title{
+    @FCSSResource.UsersManagementTitle
+}
+@section SiteHead{
+}
+@section SiteMap{
+    @FCSSResource.MasterManagement &gt;&gt; @FCSSResource.UserManagement
+}
+@section SitePageName{
+    @FCSSResource.UsersManagementTitle
+}
+<div class="header searchHeader">
+    <span></span><b></b>
+</div>
+<div class="context">
+    @using (Html.BeginForm("Index", "Class", FormMethod.Get))
+    {
+        <fieldset class="form-layout twoCol hideItem">
+            <div class=" ">
+                <label for="Name">
+                    @FCSSResource.Name：</label>
+                @Html.TextBox("Name", null, new { maxlength = 50 })
+            </div>
+            <div class="buttonRow">
+                <input type="submit" value="@FCSSResource.Search" />
+                @Html.LinkButton(FCSSResource.Add, Url.Action("Create", "Class"))
+            </div>
+        </fieldset>
+    }
+    @if (Model.Count == 0)
+    {
+        @Html.NoRecord()
+    }
+    else
+    {
+        <table border="0px" bordercolor="#eaeaea" class="dataTable">
+            <tr>
+                <th style="width: 10%">
+                    @FCSSResource.Name
+                </th>
+                <th style="width: 10%">
+                    班主任
+                </th>
+                <th>
+                    备注
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Teacher.Name
+                    </td>
+                    <td>
+                        @item.Remark
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="3">
+                    @Html.Pagination()
+                </td>
+            </tr>
+        </table>
+    }
+</div>

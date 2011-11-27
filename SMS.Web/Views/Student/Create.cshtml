@@ -1,0 +1,84 @@
+﻿@model SMS.Web.Models.Student.CreateViewModel
+@{
+    ViewBag.Title = "Create";
+}
+@section Title{
+    @FCSSResource.CreateANewUser
+}
+@section SiteMap{
+    @FCSSResource.MasterManagement &gt;&gt; @FCSSResource.UserManagement
+}
+@section SitePageName{
+添加新学生
+}
+@section SiteHead{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#OrganizationType").cascade({
+                dataType: "json",
+                baseUrl: '@Url.Action("SelectChange")?type=',
+                target: "#OrganizationId",
+                textKey: 'Name',
+                valueKey: 'Id'
+            });
+
+            dependShow("#OrganizationType", "#RoleGroup", function (trigger, target) {
+                return trigger.val() == 0;
+            });
+
+        });
+    </script>
+}
+<div class="context">
+    @using (Html.BeginForm("Create", "Student", FormMethod.Post, new { id = "CreateForm" }))
+    {
+        <fieldset class="form-layout twoCol">
+            <div class="required">
+                <label for="Account">
+                    @FCSSResource.Account：</label>
+                @Html.TextBox("Account", null, new { onkeyup = Html.Raw("value=value.replace(/[\\ *。，,&\\^\\<\\>\\\\/\\!#$%%()\\?\\{\\}|~]/,'')"), onpaste = Html.Raw("value=value.replace(/[\\ *。，,&\\^\\<\\>\\\\/\\!#$%%()\\?\\{\\}|~]/,'')") })
+            </div>
+            <div class="required">
+                <label for="Name">
+                    @FCSSResource.Name：</label>
+                @Html.TextBox("Name", null)
+            </div>
+            <div class="required">
+                <label for="Email">
+                    Email：</label>
+                @Html.TextBox("Email", null)
+            </div>
+            <div class="required">
+                <label for="PhoneNo">
+                    @FCSSResource.TeletPhone：</label>
+                @Html.TextBox("PhoneNo", null)
+            </div>
+            <div class="required">
+                <label for="Password">
+                    @FCSSResource.Password：</label>
+                (@FCSSResource.DefaultPassword)3380
+            </div>
+            <div class="required multiRadio">
+                <label for="Gender">
+                    @FCSSResource.Gender：</label>
+                @Html.MultiRadioButton("Gender", Model.Genders)
+                @*Html.DropDownList("Gender", Model.Genders)*@
+            </div>
+            <div class="custom required">
+                <label for="Roles" style="line-height: 80px">
+                    班级：</label>
+                @Html.ListBox("ClassIds", Model.Classes, new { @style = "height:76px;width:100px" })
+            </div>
+            <div class="custom">
+                <label for="Remark" style="line-height: 100px">
+                    @FCSSResource.Remark：</label>
+                @Html.TextArea("Remark", new { @style = "height:96px;width:600px" })
+            </div>
+            <div class="buttonRow">
+                <input type="submit" value="@FCSSResource.Save" />
+                <input class="btnContinueCreate" type="button" value="@FCSSResource.ContinueAdd" />
+                @Html.LinkButton(FCSSResource.Return, Url.Action("Index", "User"))
+            </div>
+        </fieldset>    
+    }
+</div>

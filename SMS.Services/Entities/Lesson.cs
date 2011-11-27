@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SMS.Services.Enum;
 
 namespace SMS.Services.Entities
 {
@@ -15,29 +16,28 @@ namespace SMS.Services.Entities
         public virtual AccountInfo Creator { get; set; }//创建者
         public virtual DateTime CreationDateTime { get; set; }//创建时间
 
+        public virtual string Remark { get; set; }
+
+        /// <summary>
+        /// 课程
+        /// </summary>
+        public virtual Course Course { get; set; }
+
+        /// <summary>
+        /// 上课类型
+        /// </summary>
+        public virtual LessonType LessonType { get; set; }
+
         /// <summary>
         /// 班组
         /// </summary>
         public virtual Class Class { get; set; }
 
         /// <summary>
-        /// 老师
+        /// 上课老师
         /// </summary>
         public virtual Teacher Teacher { get; set; }
 
-        /// <summary>
-        /// 点名时间
-        /// </summary>
-        public virtual DateTime RollcallDateTime { get; set; }
-
-        /// <summary>
-        /// 开课时间
-        /// </summary>
-        public virtual DateTime StartDateTime { get; set; }
-
-        /// <summary>
-        /// 下课时间
-        /// </summary>
-        public virtual DateTime EndDateTime { get; set; }
+       
     }
 }

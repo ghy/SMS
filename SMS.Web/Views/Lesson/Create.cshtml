@@ -1,0 +1,64 @@
+﻿@model SMS.Web.Models.Lesson.CreateViewModel
+@{
+    ViewBag.Title = "排课";
+}
+@section Title{
+排课
+}
+@section SiteMap{
+系统管理 &gt;&gt; 排课
+}
+@section SitePageName{
+排课
+}
+@section SiteHead{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#OrganizationType").cascade({
+                dataType: "json",
+                baseUrl: '@Url.Action("SelectChange")?type=',
+                target: "#OrganizationId",
+                textKey: 'Name',
+                valueKey: 'Id'
+            });
+
+            dependShow("#OrganizationType", "#RoleGroup", function (trigger, target) {
+                return trigger.val() == 0;
+            });
+
+        });
+    </script>
+}
+<div class="context">
+    @using (Html.BeginForm("Create", "Lesson", FormMethod.Post, new { id = "CreateForm" }))
+    {
+        <fieldset class="form-layout twoCol">
+            <div class="required">
+                <label for="TeacherId">
+                    开课日期：</label>
+                @Html.DatePicker("StartDate")
+            </div>
+            <div class="required">
+                <label for="TeacherId">
+                    班级：</label>
+                @Html.DropDownList("ClassId", Model.Classes, FCSSResource.PleaseSelect)
+            </div>
+            <div class="required">
+                <label for="TeacherId">
+                    教程：</label>
+                @Html.DropDownList("SchoolBook", Model.SchoolBooks, FCSSResource.PleaseSelect)
+            </div>
+            <div class="required">
+                <label for="TeacherId">
+                    课程类型：</label>
+                @Html.DropDownList("LessonType", Model.LessonTypes, FCSSResource.PleaseSelect)
+            </div>
+           
+            <div class="buttonRow">
+                <input type="submit" value="@FCSSResource.Save" />
+                <input class="btnContinueCreate" type="button" value="@FCSSResource.ContinueAdd" />
+                @Html.LinkButton(FCSSResource.Return, Url.Action("Index", "Lesson"))
+            </div>
+        </fieldset>    
+    }
+</div>

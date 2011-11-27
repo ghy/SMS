@@ -26,7 +26,8 @@ namespace SMS.Services.Mapping
                     typeof(AccountInfo),
                     typeof(Attendance),
                     typeof(Lesson),
-                    typeof(Class)
+                    typeof(Class),
+                    typeof(Course)
                 });
 
             orm.ManyToMany<Student, Class>();
@@ -122,7 +123,7 @@ namespace SMS.Services.Mapping
             mapper.AddPropertyPattern(mi =>
                 mi.GetPropertyOrFieldType() == typeof(string) &&
                 mi.Name.ToLower().Contains("PhoneNo".ToLower())
-                , pm => { pm.Length(50); pm.NotNullable(true); });
+                , pm => { pm.Length(50); pm.NotNullable(false); });
 
             mapper.AddPropertyPattern(mi =>
                 mi.GetPropertyOrFieldType() == typeof(string) &&

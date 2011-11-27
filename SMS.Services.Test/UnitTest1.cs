@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate.Tool.hbm2ddl;
 using SMS.Services.Entities;
+using SMS.Services.Enum;
 
 namespace SMS.Services.Test
 {
@@ -81,14 +82,141 @@ namespace SMS.Services.Test
                         Account = "admin",
                         Password = "8888",
                         Status = Enum.UserStatus.Enable,
+                        Role = Enum.Role.Teacher,
                         Name = "管理员",
                         CreationDateTime = DateTime.Now,
-                        Role = Enum.Role.Admin,
                         Gender = Enum.Gender.Male
                     };
-
-
                     _session.Save(adm);
+
+                    var t1 = new Teacher()
+                    {
+                        Account = "115026672",
+                        Password = "8888",
+                        Status = Enum.UserStatus.Enable,
+                        Name = "LK-楽瞳",
+                        Role = Role.Teacher,
+                        CreationDateTime = DateTime.Now,
+                        Gender = Gender.Male
+                    };
+                    _session.Save(t1);
+
+                    var cls1 = new Class()
+                    {
+
+                        CreationDateTime = DateTime.Now,
+                        Creator = adm,
+                        Name = "标日初级3班",
+                        Teacher = t1
+                    };
+                    _session.Save(cls1);
+
+                    #region 学生
+                    _session.Save(new Student()
+                    {
+                        Name = "LK-当  初",
+                        Account = "383953572",
+                        Gender = Gender.Male,
+                        Password = "3380",
+                        Role = Role.Student,
+                        CreationDateTime = DateTime.Now,
+                        Classes = new[] { cls1 }.ToList(),
+                        Creator = adm,
+                        Email = "383953572@qq.com",
+                        Status = UserStatus.Enable
+                    });
+
+                    _session.Save(new Student()
+                    {
+                        Name = "LK-仙  桃",
+                        Account = "124757433",
+                        Gender = Gender.Male,
+                        Password = "3380",
+                        Role = Role.Student,
+                        CreationDateTime = DateTime.Now,
+                        Classes = new[] { cls1 }.ToList(),
+                        Creator = adm,
+                        Email = "124757433@qq.com",
+                        Status = UserStatus.Enable
+                    });
+
+                    _session.Save(new Student()
+                    {
+                        Name = "LK-Smile",
+                        Account = "1339978253",
+                        Gender = Gender.Female,
+                        Password = "3380",
+                        Role = Role.Student,
+                        CreationDateTime = DateTime.Now,
+                        Classes = new[] { cls1 }.ToList(),
+                        Creator = adm,
+                        Email = "1339978253@qq.com",
+                        Status = UserStatus.Enable
+                    });
+
+                    _session.Save(new Student()
+                    {
+                        Name = "LK-额  旭",
+                        Account = "391332035",
+                        Gender = Gender.Male,
+                        Password = "3380",
+                        Role = Role.Student,
+                        CreationDateTime = DateTime.Now,
+                        Classes = new[] { cls1 }.ToList(),
+                        Creator = adm,
+                        Email = "391332035@qq.com",
+                        Status = UserStatus.Enable
+                    });
+
+                    #endregion
+
+
+                    int i = 0;
+                    while (i < 23)
+                    {
+
+                        var c1 = new Course()
+                        {
+                            Name = String.Format("单词，语法（第{0}课）", ++i),
+                            SchoolBook = SchoolBook.StandardJapaneseFirst
+                        };
+                        _session.Save(c1);
+
+                        var c2 = new Course()
+                        {
+                            Name = "复习，会话",
+                            SchoolBook = SchoolBook.StandardJapaneseFirst
+                        };
+                        _session.Save(c2);
+
+                        var c3 = new Course()
+                        {
+                            Name = String.Format("单词，语法（第{0}课）", ++i),
+                            SchoolBook = SchoolBook.StandardJapaneseFirst
+                        };
+                        _session.Save(c3);
+
+                        var c4 = new Course()
+                        {
+                            Name = "复习，会话",
+                            SchoolBook = SchoolBook.StandardJapaneseFirst
+                        };
+                        _session.Save(c4);
+
+                        var c5 = new Course()
+                        {
+                            Name = "课后练习1，练习2",
+                            SchoolBook = SchoolBook.StandardJapaneseFirst
+                        };
+                        _session.Save(c5);
+
+                        var c6 = new Course()
+                        {
+                            Name = "同步练习册讲解（包含听力）",
+                            SchoolBook = SchoolBook.StandardJapaneseFirst
+                        };
+                        _session.Save(c6);
+                    }
 
 
                     _session.Transaction.Commit();

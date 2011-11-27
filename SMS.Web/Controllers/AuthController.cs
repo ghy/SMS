@@ -47,7 +47,21 @@ namespace SMS.Web.Controllers
 
                     formsAuth.SignIn(userId.ToString(), false);
 
-                    return RedirectToAction("Index", "home");
+                    if (!string.IsNullOrWhiteSpace(form.ReturnUrl))
+                    {
+                        return AjaxJson(form.ReturnUrl.StartsWith("/") ? form.ReturnUrl : "/" + form.ReturnUrl);
+                    }
+
+                    var returnUrl = Request.UrlReferrer.Query;
+
+                    if (returnUrl.IndexOf("ReturnUrl") > 0)
+                    {
+                        returnUrl = System.Web.HttpUtility.UrlDecode(returnUrl.Substring(11));
+
+                        return AjaxJson(returnUrl);
+                    }
+
+                    return AjaxJson(Url.Action("Index", "Home"));
                 }
                 catch (LoginException le)
                 {
