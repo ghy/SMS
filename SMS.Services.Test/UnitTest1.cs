@@ -112,61 +112,37 @@ namespace SMS.Services.Test
                     _session.Save(cls1);
 
                     #region 学生
-                    _session.Save(new Student()
-                    {
-                        Name = "LK-当  初",
-                        Account = "383953572",
-                        Gender = Gender.Male,
-                        Password = "3380",
-                        Role = Role.Student,
-                        CreationDateTime = DateTime.Now,
-                        Classes = new[] { cls1 }.ToList(),
-                        Creator = adm,
-                        Email = "383953572@qq.com",
-                        Status = UserStatus.Enable
-                    });
+                    var students = new[] { 
+                        new []{"LK-当   初","383953572","0"},
+                        new []{"LK-仙   桃","124757433","0"},
+                        new []{"LK-Smile","1339978253","1"},
+                        new []{"LK-额   旭","391332035","0"},
+                        new []{"LK-告诉我","308344711","1"},
+                        new []{"LK-乐   园","860828579","1"},
+                    };
 
-                    _session.Save(new Student()
+                    #region MyRegion
+                    foreach (var student in students)
                     {
-                        Name = "LK-仙  桃",
-                        Account = "124757433",
-                        Gender = Gender.Male,
-                        Password = "3380",
-                        Role = Role.Student,
-                        CreationDateTime = DateTime.Now,
-                        Classes = new[] { cls1 }.ToList(),
-                        Creator = adm,
-                        Email = "124757433@qq.com",
-                        Status = UserStatus.Enable
-                    });
+                        var name = student[0];
+                        var account = student[1];
+                        var gender = Convert.ToInt32(student[2]);
+                        _session.Save(new Student()
+                        {
+                            Name = name,
+                            Account = account,
+                            Gender = (Gender)gender,
+                            Password = "3380",
+                            Role = Role.Student,
+                            CreationDateTime = DateTime.Now,
+                            Classes = new[] { cls1 }.ToList(),
+                            Creator = adm,
+                            Email = account + "@qq.com",
+                            Status = UserStatus.Enable
+                        });
+                    }
+                    #endregion
 
-                    _session.Save(new Student()
-                    {
-                        Name = "LK-Smile",
-                        Account = "1339978253",
-                        Gender = Gender.Female,
-                        Password = "3380",
-                        Role = Role.Student,
-                        CreationDateTime = DateTime.Now,
-                        Classes = new[] { cls1 }.ToList(),
-                        Creator = adm,
-                        Email = "1339978253@qq.com",
-                        Status = UserStatus.Enable
-                    });
-
-                    _session.Save(new Student()
-                    {
-                        Name = "LK-额  旭",
-                        Account = "391332035",
-                        Gender = Gender.Male,
-                        Password = "3380",
-                        Role = Role.Student,
-                        CreationDateTime = DateTime.Now,
-                        Classes = new[] { cls1 }.ToList(),
-                        Creator = adm,
-                        Email = "391332035@qq.com",
-                        Status = UserStatus.Enable
-                    });
 
                     #endregion
 

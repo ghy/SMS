@@ -71,12 +71,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="课程表.doc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SMS.Services\SMS.Services.csproj">
       <Project>{05812A03-19DE-420D-8BFD-3928078190AF}</Project>
       <Name>SMS.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="同学录.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
