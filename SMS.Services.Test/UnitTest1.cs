@@ -147,6 +147,7 @@ namespace SMS.Services.Test
                     #endregion
 
 
+                    #region Course
                     int i = 0;
                     while (i < 23)
                     {
@@ -156,7 +157,24 @@ namespace SMS.Services.Test
                             Name = String.Format("单词，语法（第{0}课）", ++i),
                             SchoolBook = SchoolBook.StandardJapaneseFirst
                         };
+
                         _session.Save(c1);
+
+                        var lesson1 = new Lesson()
+                        {
+
+                            Class = cls1,
+                            CreationDateTime = DateTime.Now,
+                            Teacher = cls1.Teacher,
+                            LessonType = LessonType.Evening,
+                            Creator = adm,
+                            Course = c1,
+                            Name = c1.Name,
+
+                        };
+                        _session.Save(lesson1);
+
+
 
                         var c2 = new Course()
                         {
@@ -165,12 +183,43 @@ namespace SMS.Services.Test
                         };
                         _session.Save(c2);
 
+
+                        var lesson2 = new Lesson()
+                        {
+
+                            Class = cls1,
+                            CreationDateTime = DateTime.Now,
+                            Teacher = cls1.Teacher,
+                            LessonType = LessonType.Evening,
+                            Creator = adm,
+                            Course = c2,
+                            Name = c2.Name,
+
+                        };
+                        _session.Save(lesson2);
+
+
+
                         var c3 = new Course()
                         {
                             Name = String.Format("单词，语法（第{0}课）", ++i),
                             SchoolBook = SchoolBook.StandardJapaneseFirst
                         };
                         _session.Save(c3);
+
+                        var lesson3 = new Lesson()
+                        {
+
+                            Class = cls1,
+                            CreationDateTime = DateTime.Now,
+                            Teacher = cls1.Teacher,
+                            LessonType = LessonType.Evening,
+                            Creator = adm,
+                            Course = c3,
+                            Name = c3.Name,
+
+                        };
+                        _session.Save(lesson3);
 
                         var c4 = new Course()
                         {
@@ -179,6 +228,20 @@ namespace SMS.Services.Test
                         };
                         _session.Save(c4);
 
+                        var lesson4 = new Lesson()
+                        {
+
+                            Class = cls1,
+                            CreationDateTime = DateTime.Now,
+                            Teacher = cls1.Teacher,
+                            LessonType = LessonType.Evening,
+                            Creator = adm,
+                            Course = c4,
+                            Name = c4.Name,
+
+                        };
+                        _session.Save(lesson4);
+
                         var c5 = new Course()
                         {
                             Name = "课后练习1，练习2",
@@ -186,13 +249,46 @@ namespace SMS.Services.Test
                         };
                         _session.Save(c5);
 
+                        var lesson5 = new Lesson()
+                        {
+
+                            Class = cls1,
+                            CreationDateTime = DateTime.Now,
+                            Teacher = cls1.Teacher,
+                            LessonType = LessonType.Evening,
+                            Creator = adm,
+                            Course = c5,
+                            Name = c5.Name,
+
+                        };
+                        _session.Save(lesson5);
+
                         var c6 = new Course()
                         {
                             Name = "同步练习册讲解（包含听力）",
                             SchoolBook = SchoolBook.StandardJapaneseFirst
                         };
                         _session.Save(c6);
+
+                        var lesson6 = new Lesson()
+                        {
+
+                            Class = cls1,
+                            CreationDateTime = DateTime.Now,
+                            Teacher = cls1.Teacher,
+                            LessonType = LessonType.Evening,
+                            Creator = adm,
+                            Course = c6,
+                            Name = c6.Name,
+
+                        };
+                        _session.Save(lesson6);
                     }
+
+
+                    #endregion
+
+
 
 
                     _session.Transaction.Commit();

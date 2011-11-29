@@ -18,14 +18,59 @@
     else
     {
         <table border="0px" bordercolor="#eaeaea" class="dataTable">
-            @for (int i = 0; i < Model.ClassLessons.Count; i++)
+            @for (int i = 0; i < Model.ClassLessons.Count; i = i + 4)
             {
+                int start = i;
                 <tr>
-                    <td>@(i + 1)
+                    <td>
+                        序号
+                    </td>
+                    <td>
+                        @(start + 1)
+                    </td>
+                    <td>
+                        @if (start + 1 < Model.ClassLessons.Count)
+                        {
+                            @(start + 2)
+                        }
+                    </td>
+                    <td>
+                        @if (start + 3 < Model.ClassLessons.Count)
+                        {
+                            @(start + 3)
+                        }
+                    </td>
+                    <td>
+                        @if (start + 4 <= Model.ClassLessons.Count)
+                        {
+                            @(start + 4)
+                        }
                     </td>
                 </tr>
                 <tr>
-                    <td>@Model.ClassLessons[i].Name
+                    <td>
+                        课程
+                    </td>
+                    <td>
+                        @Model.ClassLessons[start].Name
+                    </td>
+                    <td>
+                        @if (start + 1 < Model.ClassLessons.Count)
+                        {
+                            @Model.ClassLessons[start + 1].Name
+                        }
+                    </td>
+                    <td>
+                        @if (start + 2 < Model.ClassLessons.Count)
+                        {
+                            @Model.ClassLessons[start + 2].Name
+                        }
+                    </td>
+                    <td>
+                        @if (start + 3 < Model.ClassLessons.Count)
+                        {
+                            @Model.ClassLessons[start + 3].Name
+                        }
                     </td>
                 </tr>
             }
