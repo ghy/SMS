@@ -5,7 +5,7 @@
 @section SiteHead{
 }
 @section SiteMap{
-&gt;&gt; 课表
+课表
 }
 @section SitePageName{
 课表
@@ -18,59 +18,53 @@
     else
     {
         <table border="0px" bordercolor="#eaeaea" class="dataTable">
-            @for (int i = 0; i < Model.ClassLessons.Count; i = i + 4)
+            @{
+        int count = 5; 
+            }
+            @for (int i = 0; i < Model.ClassLessons.Count; i = i + count)
             {
                 int start = i;
-                <tr>
-                    <td>
+                <tr align="center">
+                    @*   <td style="width: 100px">
                         序号
-                    </td>
-                    <td>
-                        @(start + 1)
-                    </td>
-                    <td>
-                        @if (start + 1 < Model.ClassLessons.Count)
-                        {
-                            @(start + 2)
-                        }
-                    </td>
-                    <td>
-                        @if (start + 3 < Model.ClassLessons.Count)
-                        {
-                            @(start + 3)
-                        }
-                    </td>
-                    <td>
-                        @if (start + 4 <= Model.ClassLessons.Count)
-                        {
-                            @(start + 4)
-                        }
-                    </td>
+                    </td>*@
+                    @for (int j = 1; j <= count; j++)
+                    {
+                        <td>
+                            @if (i + j <= Model.ClassLessons.Count)
+                            {
+                                
+                                @String.Format("第 {0} 节", i + j)
+                            }
+                        </td>
+                        
+                    }
+                </tr>
+                <tr align="center">
+                    @*<td>
+                        课程
+                    </td>*@
+                    @for (int j = 0; j < count; j++)
+                    {
+                       
+                        
+                        <td>
+                            @if (start + j < Model.ClassLessons.Count)
+                            {
+                                string color = Model.ClassLessons[start + j].TakeClassDate > DateTime.Now ? "Green" : "Red";
+                                
+                                <span style="color:@color">
+                                    @Model.ClassLessons[start + j].Name
+                                    <br />
+                                    @Model.ClassLessons[start + j].TakeClassDate.ToString("yyyy年MM月dd日 ddd")
+                                </span> 
+                            }
+                        </td>
+                    }
                 </tr>
                 <tr>
-                    <td>
-                        课程
-                    </td>
-                    <td>
-                        @Model.ClassLessons[start].Name
-                    </td>
-                    <td>
-                        @if (start + 1 < Model.ClassLessons.Count)
-                        {
-                            @Model.ClassLessons[start + 1].Name
-                        }
-                    </td>
-                    <td>
-                        @if (start + 2 < Model.ClassLessons.Count)
-                        {
-                            @Model.ClassLessons[start + 2].Name
-                        }
-                    </td>
-                    <td>
-                        @if (start + 3 < Model.ClassLessons.Count)
-                        {
-                            @Model.ClassLessons[start + 3].Name
-                        }
+                    <td colspan="@count">
+                        &nbsp;
                     </td>
                 </tr>
             }

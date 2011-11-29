@@ -12,6 +12,8 @@ namespace SMS.Services.ClassLessonManagement
 
         public string Name { get; set; }
 
-        public Gender Gender { get; set; }
+        public DateTime TakeClassDate { get; set; }
+
+        public LessonType LessonType { get; set; }
     }
 }

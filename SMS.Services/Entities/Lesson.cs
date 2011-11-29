@@ -24,6 +24,11 @@ namespace SMS.Services.Entities
         public virtual Course Course { get; set; }
 
         /// <summary>
+        /// 上课日期
+        /// </summary>
+        public virtual DateTime TakeClassDate { get; set; }
+
+        /// <summary>
         /// 上课类型
         /// </summary>
         public virtual LessonType LessonType { get; set; }
@@ -38,6 +43,6 @@ namespace SMS.Services.Entities
         /// </summary>
         public virtual Teacher Teacher { get; set; }
 
-       
+
     }
 }

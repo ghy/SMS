@@ -22,8 +22,10 @@ namespace SMS.Services.ClassLessonManagement
             var cls = LogicUtils.NotNull(context.Session.Get<Class>(id));
             return cls.Lessons.Select(s => new ClassLessonListView()
             {
+                TakeClassDate = s.TakeClassDate,
                 Name = s.Name,
                 Id = s.Id,
+                LessonType = s.LessonType
             }).ToList();
         }
     }

@@ -148,9 +148,17 @@ namespace SMS.Services.Test
 
 
                     #region Course
+                    DateTime date = DateTime.Now;
                     int i = 0;
                     while (i < 23)
                     {
+
+                        #region c1
+
+                        if (date.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            date = date.AddDays(1);
+                        }
 
                         var c1 = new Course()
                         {
@@ -169,12 +177,19 @@ namespace SMS.Services.Test
                             LessonType = LessonType.Evening,
                             Creator = adm,
                             Course = c1,
+                            TakeClassDate = date,
                             Name = c1.Name,
 
                         };
+                        date = date.AddDays(1);
                         _session.Save(lesson1);
+                        #endregion
 
-
+                        #region c2
+                        if (date.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            date = date.AddDays(1);
+                        }
 
                         var c2 = new Course()
                         {
@@ -194,11 +209,19 @@ namespace SMS.Services.Test
                             Creator = adm,
                             Course = c2,
                             Name = c2.Name,
+                            TakeClassDate = date
 
                         };
+                        date = date.AddDays(1);
                         _session.Save(lesson2);
+                        #endregion
 
 
+                        #region c3
+                        if (date.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            date = date.AddDays(1);
+                        }
 
                         var c3 = new Course()
                         {
@@ -217,9 +240,20 @@ namespace SMS.Services.Test
                             Creator = adm,
                             Course = c3,
                             Name = c3.Name,
+                            TakeClassDate = date
 
                         };
+                        date = date.AddDays(1);
                         _session.Save(lesson3);
+
+                        #endregion
+
+
+                        #region c4
+                        if (date.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            date = date.AddDays(1);
+                        }
 
                         var c4 = new Course()
                         {
@@ -238,10 +272,21 @@ namespace SMS.Services.Test
                             Creator = adm,
                             Course = c4,
                             Name = c4.Name,
+                            TakeClassDate = date
 
                         };
+                        date = date.AddDays(1);
                         _session.Save(lesson4);
 
+                        #endregion
+
+
+                        #region c5
+
+                        if (date.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            date = date.AddDays(1);
+                        }
                         var c5 = new Course()
                         {
                             Name = "课后练习1，练习2",
@@ -259,9 +304,20 @@ namespace SMS.Services.Test
                             Creator = adm,
                             Course = c5,
                             Name = c5.Name,
+                            TakeClassDate = date
 
                         };
+                        date = date.AddDays(1);
                         _session.Save(lesson5);
+
+                        #endregion
+
+
+                        #region c6
+                        if (date.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            date = date.AddDays(1);
+                        }
 
                         var c6 = new Course()
                         {
@@ -280,9 +336,12 @@ namespace SMS.Services.Test
                             Creator = adm,
                             Course = c6,
                             Name = c6.Name,
+                            TakeClassDate = date
 
                         };
+                        date = date.AddDays(1);
                         _session.Save(lesson6);
+                        #endregion
                     }
 
 
@@ -302,5 +361,9 @@ namespace SMS.Services.Test
                 }
             }
         }
+
+
+
+
     }
 }
