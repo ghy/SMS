@@ -156,6 +156,7 @@
     <Compile Include="Common\LogErrorAttribute.cs" />
     <Compile Include="Common\ManagementController.cs" />
     <Compile Include="Common\MasterInfo.cs" />
+    <Compile Include="Controllers\AttendanceController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\ClassLessonController.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Attendance\CreateForm.cs" />
     <Compile Include="Models\Auth\LoginForm.cs" />
     <Compile Include="Models\ClassLesson\IndexViewModel.cs" />
     <Compile Include="Models\Class\CreateForm.cs" />

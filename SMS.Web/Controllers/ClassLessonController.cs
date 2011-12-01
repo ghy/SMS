@@ -29,5 +29,7 @@ namespace SMS.Web.Controllers
             return View(new IndexViewModel(manager.Create<ListClassLessonProcessor>().Execute(id.Value)));
         }
 
+        
+
     }
 }

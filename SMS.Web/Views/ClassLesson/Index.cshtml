@@ -3,6 +3,29 @@
 课表
 }
 @section SiteHead{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".sign-in").click(function () {
+
+                var self = $(this);
+                var lessonId = self.attr("val");
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Create", "Attendance", new { AttendanceType = SMS.Services.Enum.AttendanceType.Arrive })',
+                    data: "LessonId=" + lessonId,
+                    success: function (data) {
+                        alert(data.ErrorMessages.join("\n") + data.ModelErrors.join("\n"));
+                    }
+                });
+
+            });
+
+
+        });
+
+    </script>
 }
 @section SiteMap{
 课表
@@ -57,7 +80,8 @@
                                     @Model.ClassLessons[start + j].Name
                                     <br />
                                     @Model.ClassLessons[start + j].TakeClassDate.ToString("yyyy年MM月dd日 ddd")
-                                </span> 
+                                    <br />
+                                    <a class="sign-in" val="@Model.ClassLessons[start + j].Id" href="#">签到</a> </span> 
                             }
                         </td>
                     }

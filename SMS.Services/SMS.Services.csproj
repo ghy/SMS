@@ -64,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContext.cs" />
+    <Compile Include="AttendanceManagement\AddAttendanceProcessor.cs" />
+    <Compile Include="AttendanceManagement\AttendanceAddView.cs" />
+    <Compile Include="AttendanceManagement\AttendanceException.cs" />
     <Compile Include="Auth\AuthQueries.cs" />
     <Compile Include="Auth\LoginProcessor.cs" />
     <Compile Include="Auth\LoginException.cs" />
@@ -87,6 +90,8 @@
     <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Teacher.cs" />
+    <Compile Include="Enum\AttendanceExceptionType.cs" />
+    <Compile Include="Enum\AttendanceType.cs" />
     <Compile Include="Enum\ClassSortType.cs" />
     <Compile Include="Enum\Gender.cs" />
     <Compile Include="Enum\LessonSortType.cs" />

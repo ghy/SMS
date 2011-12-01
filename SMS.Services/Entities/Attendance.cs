@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SMS.Services.Enum;
 
 namespace SMS.Services.Entities
 {
@@ -23,9 +24,19 @@ namespace SMS.Services.Entities
         public virtual Student Student { get; set; }
 
         /// <summary>
+        /// 出勤类型
+        /// </summary>
+        public virtual AttendanceType AttendanceType { get; set; }
+
+        /// <summary>
         /// 出勤时间
         /// </summary>
         public virtual DateTime? AttendanceDateTime { get; set; }
+
+        /// <summary>
+        /// 原因
+        /// </summary>
+        public virtual string Remark { get; set; }
 
     }
 }
