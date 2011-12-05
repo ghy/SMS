@@ -21,16 +21,15 @@
         }
         @if (Model.Role == SMS.Services.Enum.Role.Student)
         {
-            foreach (var item in Model.Classes)
-            {
-            <dt><span class="master"></span>@item.Name</dt>
+          
+            <dt><span class="master"></span>@Model.Class.Name</dt>
             <dd>
                 <ul>
-                    <li>@Html.ActionLink("学生列表", "Index", "Classmate", new { id = item.Id }, null)</li>
-                    <li>@Html.ActionLink("出勤列表", "Index", "ClassLesson", new { id = item.Id }, null)</li>
+                    <li>@Html.ActionLink("学生列表", "Index", "Classmate", new { id = Model.Class.Id }, null)</li>
+                    <li>@Html.ActionLink("出勤列表", "Index", "ClassLesson", new { id = Model.Class.Id }, null)</li>
                 </ul>
             </dd>
-            }
+            
         }
     </dl>
 </div>

@@ -454,7 +454,6 @@
     <Content Include="Content\Images\login_bg.png" />
     <Content Include="Content\Images\login_btn.png" />
     <Content Include="Content\Images\login_slip.png" />
-    <Content Include="Content\Images\logo.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\map.jpg" />
     <Content Include="Content\Images\menu-left.gif" />

@@ -30,12 +30,11 @@ namespace SMS.Services.StudentManagement
 
             var user = LogicUtils.NotNull(context.Session.Get<AccountInfo>(context.OperatorInfo.OperatorId));
 
-            var classes = new List<Class>();
             student = new Student
             {
                 Account = view.Account,
                 Password = "3380",
-                Name = view.Name,
+                Name = view.FullName,
                 Role = Role.Student,
                 CreationDateTime = context.AppContext.Now,
                 Creator = user,
@@ -43,14 +42,9 @@ namespace SMS.Services.StudentManagement
                 Gender = view.Gender,
                 Status = UserStatus.Enable,
                 Remark = view.Remark,
-                Classes = classes
+                Class = LogicUtils.NotNull(context.Session.Get<Class>(view.ClassId))
             };
 
-            foreach (var classId in view.ClassIds)
-            {
-                var cls = LogicUtils.NotNull(context.Session.Get<Class>(classId));
-                student.Classes.Add(cls);
-            }
             using (var scope = context.Session.RequestTransaction())
             {
                 context.Session.Save(student);

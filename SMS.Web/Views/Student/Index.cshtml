@@ -6,10 +6,10 @@
 @section SiteHead{
 }
 @section SiteMap{
-    学生管理 &gt;&gt; 学生列表
+学生管理 &gt;&gt; 学生列表
 }
 @section SitePageName{
-   学生列表
+学生列表
 }
 <div class="header searchHeader">
     <span></span><b></b>
@@ -85,7 +85,7 @@
                         @item.PhoneNo
                     </td>
                     <td>
-                        @string.Join(";", item.Classes.Select(c => c.Name))
+                        @item.Class.Name
                     </td>
                     <td align="center">
                         @if (item.Status == SMS.Services.Enum.UserStatus.Enable)

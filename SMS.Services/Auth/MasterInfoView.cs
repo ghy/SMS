@@ -13,6 +13,6 @@ namespace SMS.Services.Auth
         public string Account { get; set; }
         public string Name { get; set; }
         public Role Role { get; set; }
-        public List<NameIdView> Classes { get; set; }
+        public NameIdView Class { get; set; }
     }
 }

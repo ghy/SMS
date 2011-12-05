@@ -137,7 +137,7 @@ namespace SMS.Services.Test
                             Password = "3880",
                             Role = Role.Student,
                             CreationDateTime = DateTime.Now,
-                            Classes = new[] { cls1 }.ToList(),
+                            Class = cls1,
                             Creator = adm,
                             Email = account + "@qq.com",
                             Status = UserStatus.Enable

@@ -12,6 +12,7 @@ namespace SMS.Services.Entities
         /// </summary>
         public virtual int No { get; set; }
 
-        public virtual ICollection<Class> Classes { get; set; }
+        public virtual Class Class { get; set; }
+
     }
 }

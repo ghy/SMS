@@ -45,16 +45,21 @@
     </script>
 </head>
 <body style="background: #F0F0F0; display: none;">
-    <div class="top" style="min-width: 960px">
-        <div>
-            <h1>
-                &nbsp;&nbsp;LK免费日语教学学院</h1>
+       <div class="top" style="min-width: 960px">
+        <div class="logo">
         </div>
         <div class="userBox">
-            YY频道：<a href="http://yy.duowan.com/go.html#3880">3880</a>
+            @Html.ChangeCultureLink("中文", "zh-CN", new
+         {
+             @class = "zh-cn-link"
+         }) | @Html.ChangeCultureLink("English", "en-US",
+            new
+            {
+                @class = "en-us-link"
+            })
         </div>
         <div class="breadNav">
-        </div>
+           </div>
     </div>
     <div class="login" style="min-width: 960px">
         <div style="width: 1000px; margin: 0px auto">

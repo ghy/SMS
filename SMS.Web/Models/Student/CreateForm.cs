@@ -13,7 +13,7 @@ namespace SMS.Web.Models.Student
         public string Account { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string FullName { get; set; }
 
         public Gender Gender { get; set; }
 
@@ -23,7 +23,6 @@ namespace SMS.Web.Models.Student
 
         public string Remark { get; set; }
 
-        [Required]
-        public IList<int> ClassIds { get; set; }
+        public int? ClassId { get; set; }
     }
 }

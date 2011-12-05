@@ -23,12 +23,10 @@ namespace SMS.Services.Auth
             };
 
             var student = user as Student;
-
             if (student != null)
             {
-                master.Classes = student.Classes.Select(item => new NameIdView(item.Id, item.Name)).ToList();
+                master.Class = new NameIdView(student.Class.Id, student.Name);
             }
-
             return master;
         }
     }

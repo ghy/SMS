@@ -10,7 +10,7 @@ namespace SMS.Services.StudentManagement
     {
         public string Account { get; set; }
 
-        public string Name { get; set; }
+        public string FullName { get; set; }
 
         public Gender Gender { get; set; }
 
@@ -20,7 +20,7 @@ namespace SMS.Services.StudentManagement
 
         public string Remark { get; set; }
 
-        public IList<int> ClassIds { get; set; }
+        public int ClassId { get; set; }
 
     }
 }

@@ -123,6 +123,9 @@
   <data name="ClassIds" xml:space="preserve">
     <value>班级</value>
   </data>
+  <data name="FullName" xml:space="preserve">
+    <value>姓名</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>密码</value>
   </data>

@@ -30,8 +30,13 @@ namespace SMS.Services.Auth
                 throw new LoginException(LoginFailType.AccountOrPasswordWrong);
             else if (user.Status == UserStatus.Disable)
                 throw new LoginException(LoginFailType.UserIsDisabled);
-            else
-                return user.Id;
+
+            var stu = user as Student;
+            if (stu != null && stu.Class == null)
+            {
+                throw new LoginException(LoginFailType.NotClass);
+            }
+            return user.Id;
         }
     }
 }

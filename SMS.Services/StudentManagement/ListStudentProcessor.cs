@@ -77,7 +77,7 @@ namespace SMS.Services.StudentManagement
                 Gender = d.Gender,
                 PhoneNo = d.PhoneNo,
                 Remark = d.Remark,
-                Classes = d.Classes.Select(c => new NameIdView(c.Id, c.Name)).ToList()
+                Class = new NameIdView(d.Id, d.Name),
             }).ToArray();
 
             return new Pagination<StudentListView>() { Items = items, Total = total };

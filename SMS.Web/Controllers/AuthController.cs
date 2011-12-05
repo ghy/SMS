@@ -73,6 +73,9 @@ namespace SMS.Web.Controllers
                         case LoginFailType.UserIsDisabled:
                             ViewErrorMessage("用户已禁用");
                             break;
+                        case LoginFailType.NotClass:
+                            ViewErrorMessage("您还没有分配班级，不能登录");
+                            break;
                     }
                 }
             }

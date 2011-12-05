@@ -8,6 +8,7 @@ namespace SMS.Services.Enum
     public enum LoginFailType
     {
         AccountOrPasswordWrong,
-        UserIsDisabled
+        UserIsDisabled,
+        NotClass
     }
 }

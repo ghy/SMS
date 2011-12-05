@@ -25,6 +25,6 @@ namespace SMS.Services.StudentManagement
 
         public string Remark { get; set; }
 
-        public List<NameIdView> Classes { get; set; }
+        public NameIdView Class { get; set; }
     }
 }

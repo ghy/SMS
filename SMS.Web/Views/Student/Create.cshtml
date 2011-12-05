@@ -28,8 +28,8 @@
             </div>
             <div class="required">
                 <label for="Name">
-                    @FCSSResource.Name：</label>
-                @Html.TextBox("Name", null)
+                    姓名：</label>
+                @Html.TextBox("FullName", null)
             </div>
             <div>
                 <label for="Email">
@@ -50,12 +50,11 @@
                 <label for="Gender">
                     @FCSSResource.Gender：</label>
                 @Html.MultiRadioButton("Gender", Model.Genders)
-                @*Html.DropDownList("Gender", Model.Genders)*@
             </div>
-            <div class="custom required">
-                <label for="Roles" style="line-height: 80px">
+            <div class="custom">
+                <label for="ClassId">
                     班级：</label>
-                @Html.ListBox("ClassIds", Model.Classes, new { @style = "height:76px;width:100px" })
+                @Html.DropDownList("ClassId", Model.Classes, "--请选择--")
             </div>
             <div class="custom">
                 <label for="Remark" style="line-height: 100px">
