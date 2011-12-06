@@ -120,6 +120,9 @@
   <data name="Account" xml:space="preserve">
     <value>帐号</value>
   </data>
+  <data name="ClassId" xml:space="preserve">
+    <value>班级</value>
+  </data>
   <data name="ClassIds" xml:space="preserve">
     <value>班级</value>
   </data>

@@ -183,6 +183,7 @@
     <Compile Include="Models\ProcessorManager.cs" />
     <Compile Include="Models\Student\CreateForm.cs" />
     <Compile Include="Models\Student\CreateViewModel.cs" />
+    <Compile Include="Models\Student\EditForm.cs" />
     <Compile Include="Models\Student\IndexForm.cs" />
     <Compile Include="Models\Student\IndexViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1869,6 +1870,7 @@
     <Content Include="Views\ClassLesson\Index.cshtml" />
     <Content Include="Views\Attendance\LessonAttendance.cshtml" />
     <Content Include="Views\Home\Built.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SMS.Services\SMS.Services.csproj">

@@ -25,7 +25,7 @@ namespace SMS.Services.Auth
             var student = user as Student;
             if (student != null)
             {
-                master.Class = new NameIdView(student.Class.Id, student.Name);
+                master.Class = new NameIdView(student.Class.Id, student.Class.Name);
             }
             return master;
         }

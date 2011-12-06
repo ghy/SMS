@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
 using SMS.Services.Enum;
-using System.ComponentModel.DataAnnotations;
 
-namespace SMS.Web.Models.Student
+namespace SMS.Services.StudentManagement
 {
-    public class CreateForm
+    public class StudentEditView
     {
-        [Required]
+        public int Id { get; set; }
+
         public string Account { get; set; }
 
-        [Required]
         public string FullName { get; set; }
 
         public Gender Gender { get; set; }
@@ -23,7 +22,6 @@ namespace SMS.Web.Models.Student
 
         public string Remark { get; set; }
 
-        [Required]
         public int ClassId { get; set; }
     }
 }

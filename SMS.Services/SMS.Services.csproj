@@ -120,7 +120,9 @@
     <Compile Include="StudentManagement\ListStudentParameters.cs" />
     <Compile Include="StudentManagement\ListStudentProcessor.cs" />
     <Compile Include="StudentManagement\StudentAddView.cs" />
+    <Compile Include="StudentManagement\StudentEditView.cs" />
     <Compile Include="StudentManagement\StudentListView.cs" />
+    <Compile Include="StudentManagement\UpdateStudentProcessor.cs" />
     <Compile Include="TransactionExtensions.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -88,8 +88,17 @@ namespace SMS.Web.Controllers
                     ViewErrorMessage(e.Message);
                 }
             }
-
             return Create();
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            return View();
+        }
+
+        public ActionResult Edit(EditForm form)
+        {
+            return View();
         }
 
     }
