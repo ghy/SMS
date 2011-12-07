@@ -10,7 +10,7 @@ namespace SMS.Services.AttendanceManagement
     {
         public int LessonId { get; set; }
 
-        public AttendanceType AttendanceType { get; set; }
+        public SignInAskOff SignInAskOff { get; set; }
 
         public string Remark { get; set; }
     }

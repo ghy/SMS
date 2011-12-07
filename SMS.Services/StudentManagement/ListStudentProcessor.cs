@@ -73,6 +73,10 @@ namespace SMS.Services.StudentManagement
                 Name = d.Name,
                 Account = d.Account,
                 Status = d.Status,
+                Email = d.Email,
+                Gender = d.Gender,
+                PhoneNo = d.PhoneNo,
+                Remark = d.Remark,
                 Classes = d.Classes.Select(c => new NameIdView(c.Id, c.Name)).ToList()
             }).ToArray();
 

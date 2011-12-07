@@ -67,6 +67,8 @@
     <Compile Include="AttendanceManagement\AddAttendanceProcessor.cs" />
     <Compile Include="AttendanceManagement\AttendanceAddView.cs" />
     <Compile Include="AttendanceManagement\AttendanceException.cs" />
+    <Compile Include="AttendanceManagement\LessonAttendanceListView.cs" />
+    <Compile Include="AttendanceManagement\ListLessonAttendanceProcessor.cs" />
     <Compile Include="Auth\AuthQueries.cs" />
     <Compile Include="Auth\LoginProcessor.cs" />
     <Compile Include="Auth\LoginException.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Enum\LoginFailType.cs" />
     <Compile Include="Enum\Role.cs" />
     <Compile Include="Enum\SchoolBook.cs" />
+    <Compile Include="Enum\SignInAskOff.cs" />
     <Compile Include="Enum\StudentSortType.cs" />
     <Compile Include="Enum\UserStatus.cs" />
     <Compile Include="ExecuteContext.cs" />

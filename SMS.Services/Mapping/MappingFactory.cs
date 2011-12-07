@@ -34,6 +34,7 @@ namespace SMS.Services.Mapping
             orm.ManyToOne<Lesson, Class>();
             orm.ManyToOne<Class, Teacher>();
             orm.ManyToOne<Lesson, Teacher>();
+            orm.ManyToOne<Attendance, Lesson>();
 
             //orm.Poid<Role>(o => o.Type);
             var mapper = new Mapper(orm, new CoolPatternsAppliersHolder(orm));

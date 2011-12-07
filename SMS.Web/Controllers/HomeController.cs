@@ -17,5 +17,10 @@ namespace SMS.Web.Controllers
             return View();
         }
 
+        public ActionResult Built()
+        {
+            return View();
+        }
+
     }
 }

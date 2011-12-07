@@ -43,6 +43,11 @@ namespace SMS.Services.Entities
         /// </summary>
         public virtual Teacher Teacher { get; set; }
 
+        /// <summary>
+        /// 出勤记录
+        /// </summary>
+        public virtual ICollection<Attendance> Attendances { get; set; }
+
 
     }
 }

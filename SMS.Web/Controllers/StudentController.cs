@@ -69,7 +69,7 @@ namespace SMS.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(CreateForm form)
+        public ActionResult Create(CreateForm form, bool? isContinue)
         {
             if (ModelState.IsValid)
             {
@@ -79,8 +79,8 @@ namespace SMS.Web.Controllers
                     processor.Execute(ConvertTo<StudentAddView>(form));
 
                     TempSuccessMessage("学生添加成功");
-                    //if (isContinue.HasValue)
-                    //    return RedirectToAction("Add");
+                    if (isContinue.HasValue)
+                        return RedirectToAction("Create");
                     return RedirectToAction("Index");
                 }
                 catch (RepeatException e)

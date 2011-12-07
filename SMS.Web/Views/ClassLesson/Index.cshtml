@@ -6,20 +6,56 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
-            $(".sign-in").click(function () {
+            $(".sign-in").button().click(function () {
 
                 var self = $(this);
                 var lessonId = self.attr("val");
 
                 $.ajax({
                     type: "POST",
-                    url: '@Url.Action("Create", "Attendance", new { AttendanceType = SMS.Services.Enum.AttendanceType.Arrive })',
-                    data: "LessonId=" + lessonId,
+                    url: '@Url.Action("SignIn", "Attendance", new { AttendanceType = SMS.Services.Enum.AttendanceType.Arrive })',
+                    data: "id=" + lessonId,
                     success: function (data) {
-                        alert(data.ErrorMessages.join("\n") + data.ModelErrors.join("\n"));
+                        if (data.Success) {
+                            window.location.reload();
+                        } else {
+                            alert(data.ErrorMessages.join("\n") + data.ModelErrors.join("\n"));
+                        }
                     }
                 });
 
+            });
+
+
+
+            $(".ask-off").button().click(function () {
+                $("#LessonId").val($(this).attr("val"));
+                $("#dialog-form").dialog("open");
+            });
+
+            $("#dialog-form").dialog({
+                autoOpen: false,
+                resizable: false,
+                height: 200,
+                modal: true,
+                buttons: {
+                    "提交": function () {
+                        $("#AskOffForm").ajaxSubmit({
+                            dataType: "json",
+                            success: function (data) {
+                                if (data.Success) {
+                                    window.location.reload();
+                                } else {
+                                    alert(data.ErrorMessages.join("\n") + data.ModelErrors.join("\n"));
+                                }
+                            }
+                        });
+
+                    },
+                    取消: function () {
+                        $(this).dialog("close");
+                    }
+                }
             });
 
 
@@ -47,7 +83,7 @@
             @for (int i = 0; i < Model.ClassLessons.Count; i = i + count)
             {
                 int start = i;
-                <tr align="center">
+                <tr align="center" style="background-color: infobackground">
                     @*   <td style="width: 100px">
                         序号
                     </td>*@
@@ -68,30 +104,72 @@
                         课程
                     </td>*@
                     @for (int j = 0; j < count; j++)
-                    {
-                       
-                        
+                    {    
                         <td>
                             @if (start + j < Model.ClassLessons.Count)
                             {
-                                string color = Model.ClassLessons[start + j].TakeClassDate > DateTime.Now ? "Green" : "Red";
-                                
-                                <span style="color:@color">
-                                    @Model.ClassLessons[start + j].Name
-                                    <br />
+                                var type = Model.ClassLessons[start + j].CurrAttendanceType;
+                                var takeClassDate = Model.ClassLessons[start + j].TakeClassDate.Date;
+                                string color = Model.ClassLessons[start + j].TakeClassDate > DateTime.Now ? "Green" : "Red";                    
+                               
+                                <h4>
+                                    @if (takeClassDate > DateTime.Now.AddDays(1))
+                                    {
+                                        @Model.ClassLessons[start + j].Name
+                                    }
+                                    else
+                                    {
+                                  
+                                        <a href='@Url.Action("LessonAttendance", "Attendance", new { id = Model.ClassLessons[start + j].Id })'>@Model.ClassLessons[start + j].Name</a>
+                                    }
+                                </h4>
+                               
+                                <h5 style="color: Gray; font-weight: normal; font-size: 11px">
                                     @Model.ClassLessons[start + j].TakeClassDate.ToString("yyyy年MM月dd日 ddd")
-                                    <br />
-                                    <a class="sign-in" val="@Model.ClassLessons[start + j].Id" href="#">签到</a> </span> 
+                                </h5>
+                                <span style="color: red">
+                                    @if (takeClassDate < DateTime.Now.Date)
+                                    {
+                                        @string.Format("到课:{0} 迟到：{1} 请假：{2}", Model.ClassLessons[start + j].Arrivals,
+                                Model.ClassLessons[start + j].Late, Model.ClassLessons[start + j].Late)
+                                    }
+                                    else if (DateTime.Today.AddDays(1) >= takeClassDate)
+                                    {
+
+                                        if (type == null || type == SMS.Services.Enum.AttendanceType.UnArrive)
+                                        {
+                                        <a class="sign-in" val="@Model.ClassLessons[start + j].Id" href="#">签到</a>
+                                        <a class="ask-off" val="@Model.ClassLessons[start + j].Id" href="#">请假</a>
+                                        }
+                                        else if (type == SMS.Services.Enum.AttendanceType.AskOff)
+                                        {
+                                        <a class="sign-in" val="@Model.ClassLessons[start + j].Id" href="#">签到</a>
+                                        <span>已请假</span>
+                                        }
+                                        else
+                                        {
+                                        <span>已签到</span>
+                                        <a class="ask-off" val="@Model.ClassLessons[start + j].Id" href="#">请假</a>
+                                        }
+                                    } </span>
+                               
                             }
                         </td>
                     }
                 </tr>
-                <tr>
+                <tr style="height: 10px">
                     <td colspan="@count">
-                        &nbsp;
                     </td>
                 </tr>
             }
         </table>
+    }
+</div>
+<div id="dialog-form" title="请填写请假原因">
+    @using (Html.BeginForm("AskOff", "Attendance", FormMethod.Post, new { id = "AskOffForm" }))
+    {
+        @Html.Hidden("LessonId")
+        <textarea rows="3" cols="40" name="AskOffCause" id="name" class="text ui-widget-content ui-corner-all">
+        </textarea>
     }
 </div>

@@ -22,6 +22,8 @@ namespace SMS.Services.ClassmateManagement
             var cls = LogicUtils.NotNull(context.Session.Get<Class>(id));
             return cls.Students.Select(s => new ClassmateListView()
             {
+                No = s.No,
+                Email = s.Email,
                 Name = s.Name,
                 Id = s.Id,
                 Gender = s.Gender

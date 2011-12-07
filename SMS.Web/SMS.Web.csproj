@@ -167,7 +167,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Attendance\CreateForm.cs" />
+    <Compile Include="Models\Attendance\AskOffForm.cs" />
+    <Compile Include="Models\Attendance\LessonAttendanceViewModel.cs" />
     <Compile Include="Models\Auth\LoginForm.cs" />
     <Compile Include="Models\ClassLesson\IndexViewModel.cs" />
     <Compile Include="Models\Class\CreateForm.cs" />
@@ -1867,6 +1868,8 @@
     <Content Include="Views\Lesson\Create.cshtml" />
     <Content Include="Views\Classmate\Index.cshtml" />
     <Content Include="Views\ClassLesson\Index.cshtml" />
+    <Content Include="Views\Attendance\LessonAttendance.cshtml" />
+    <Content Include="Views\Home\Built.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SMS.Services\SMS.Services.csproj">

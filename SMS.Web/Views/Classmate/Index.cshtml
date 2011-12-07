@@ -18,35 +18,34 @@
     else
     {
         <table border="0px" bordercolor="#eaeaea" class="dataTable">
-            @for (int i = 0; i < Model.Classmates.Count; i = i + 2)
+            <tr>
+                <th style="width: 5%">
+                    学号
+                </th>
+                <th style="width: 10%">
+                    姓名
+                </th>
+                <th style="width: 10%">
+                    性别
+                </th>
+                <th>
+                    Email
+                </th>
+            </tr>
+            @foreach (var item in Model.Classmates)
             {
-                int start = i;
                 <tr>
                     <td>
-                        学号
+                        @item.No
                     </td>
                     <td>
-                        @(start + 1)
+                        @item.Name
                     </td>
                     <td>
-                        @if (start + 1 < Model.Classmates.Count )
-                        {
-                            @(start + 2)
-                        }
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        姓名
+                        @I18NUtils.Text(item.Gender)
                     </td>
                     <td>
-                        @Model.Classmates[start].Name
-                    </td>
-                    <td>
-                        @if (start + 1 < Model.Classmates.Count)
-                        {
-                            @Model.Classmates[start + 1].Name
-                        }
+                        @item.Email
                     </td>
                 </tr>
             }

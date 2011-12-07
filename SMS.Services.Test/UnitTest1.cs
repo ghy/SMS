@@ -113,26 +113,28 @@ namespace SMS.Services.Test
 
                     #region 学生
                     var students = new[] { 
-                        new []{"LK-当   初","383953572","0"},
-                        new []{"LK-仙   桃","124757433","0"},
-                        new []{"LK-Smile","1339978253","1"},
-                        new []{"LK-额   旭","391332035","0"},
-                        new []{"LK-告诉我","308344711","1"},
-                        new []{"LK-乐   园","860828579","1"},
+                        new []{"1","LK-当   初","383953572","0"},
+                        new []{"2","LK-仙   桃","124757433","0"},
+                        new []{"3","LK-Smile","1339978253","1"},
+                        new []{"4","LK-额   旭","391332035","0"},
+                        new []{"5","LK-告诉我","308344711","1"},
+                        new []{"6","LK-乐   园","860828579","1"},
                     };
 
                     #region MyRegion
                     foreach (var student in students)
                     {
-                        var name = student[0];
-                        var account = student[1];
-                        var gender = Convert.ToInt32(student[2]);
+                        var no = student[0];
+                        var name = student[1];
+                        var account = student[2];
+                        var gender = Convert.ToInt32(student[3]);
                         _session.Save(new Student()
                         {
+                            No = Convert.ToInt32(no),
                             Name = name,
                             Account = account,
                             Gender = (Gender)gender,
-                            Password = "3380",
+                            Password = "3880",
                             Role = Role.Student,
                             CreationDateTime = DateTime.Now,
                             Classes = new[] { cls1 }.ToList(),
@@ -148,7 +150,7 @@ namespace SMS.Services.Test
 
 
                     #region Course
-                    DateTime date = DateTime.Now;
+                    DateTime date = new DateTime(2011, 11, 25);
                     int i = 0;
                     while (i < 23)
                     {

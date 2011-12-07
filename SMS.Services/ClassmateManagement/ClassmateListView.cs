@@ -10,8 +10,12 @@ namespace SMS.Services.ClassmateManagement
     {
         public int Id { get; set; }
 
+        public int No { get; set; }
+
         public string Name { get; set; }
 
         public Gender Gender { get; set; }
+
+        public string Email { get; set; }
     }
 }

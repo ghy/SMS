@@ -1,6 +1,4 @@
 ﻿@model SMS.Services.Auth.MasterInfoView
-@{ 
-}
 <div class="nav">
     <dl style="margin-bottom: 0px">
         @if (Model.Role != SMS.Services.Enum.Role.Student)
@@ -10,6 +8,13 @@
                 <ul>
                     <li>@Html.ActionLink("班级管理", "Index", "Class")</li>
                     <li>@Html.ActionLink("学生管理", "Index", "Student")</li>
+                </ul>
+            </dd>
+            
+            <dt><span class="master"></span>课程管理</dt>
+            <dd>
+                <ul>
+                    <li>@Html.ActionLink("课程列表", "Index", "Lesson")</li>
                     <li>@Html.ActionLink("排课", "Index", "Lesson")</li>
                 </ul>
             </dd>
@@ -21,12 +26,11 @@
             <dt><span class="master"></span>@item.Name</dt>
             <dd>
                 <ul>
-                    <li>@Html.ActionLink("同学录", "Index", "Classmate", new { id = item.Id }, null)</li>
-                    <li>@Html.ActionLink("课表", "Index", "ClassLesson", new { id = item.Id }, null)</li>
+                    <li>@Html.ActionLink("学生列表", "Index", "Classmate", new { id = item.Id }, null)</li>
+                    <li>@Html.ActionLink("出勤列表", "Index", "ClassLesson", new { id = item.Id }, null)</li>
                 </ul>
             </dd>
             }
-
         }
     </dl>
 </div>

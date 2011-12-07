@@ -3,30 +3,18 @@
     ViewBag.Title = "Create";
 }
 @section Title{
-    @FCSSResource.CreateANewUser
+学生管理
 }
 @section SiteMap{
-    @FCSSResource.MasterManagement &gt;&gt; @FCSSResource.UserManagement
+学生管理 &gt;&gt; 添加学生
 }
 @section SitePageName{
 添加新学生
 }
 @section SiteHead{
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#OrganizationType").cascade({
-                dataType: "json",
-                baseUrl: '@Url.Action("SelectChange")?type=',
-                target: "#OrganizationId",
-                textKey: 'Name',
-                valueKey: 'Id'
-            });
+      
 
-            dependShow("#OrganizationType", "#RoleGroup", function (trigger, target) {
-                return trigger.val() == 0;
-            });
-
-        });
     </script>
 }
 <div class="context">
@@ -43,12 +31,12 @@
                     @FCSSResource.Name：</label>
                 @Html.TextBox("Name", null)
             </div>
-            <div class="required">
+            <div>
                 <label for="Email">
                     Email：</label>
                 @Html.TextBox("Email", null)
             </div>
-            <div class="required">
+            <div>
                 <label for="PhoneNo">
                     @FCSSResource.TeletPhone：</label>
                 @Html.TextBox("PhoneNo", null)
@@ -56,7 +44,7 @@
             <div class="required">
                 <label for="Password">
                     @FCSSResource.Password：</label>
-                (@FCSSResource.DefaultPassword)3380
+                (@FCSSResource.DefaultPassword)3880
             </div>
             <div class="required multiRadio">
                 <label for="Gender">
@@ -77,7 +65,7 @@
             <div class="buttonRow">
                 <input type="submit" value="@FCSSResource.Save" />
                 <input class="btnContinueCreate" type="button" value="@FCSSResource.ContinueAdd" />
-                @Html.LinkButton(FCSSResource.Return, Url.Action("Index", "User"))
+                @Html.LinkButton(FCSSResource.Return, Url.Action("Index", "Student"))
             </div>
         </fieldset>    
     }

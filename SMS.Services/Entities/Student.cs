@@ -7,6 +7,11 @@ namespace SMS.Services.Entities
 {
     public class Student : AccountInfo
     {
+        /// <summary>
+        /// 学号
+        /// </summary>
+        public virtual int No { get; set; }
+
         public virtual ICollection<Class> Classes { get; set; }
     }
 }

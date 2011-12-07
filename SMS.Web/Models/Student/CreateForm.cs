@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SMS.Services.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace SMS.Web.Models.Student
 {
     public class CreateForm
     {
+        [Required]
         public string Account { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
         public Gender Gender { get; set; }
@@ -20,6 +23,7 @@ namespace SMS.Web.Models.Student
 
         public string Remark { get; set; }
 
+        [Required]
         public IList<int> ClassIds { get; set; }
     }
 }

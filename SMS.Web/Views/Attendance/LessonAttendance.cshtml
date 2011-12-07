@@ -1,0 +1,59 @@
+﻿@model SMS.Web.Models.Attendance.LessonAttendanceViewModel
+@{
+    ViewBag.Title = "Create";
+}
+@section Title{
+    @FCSSResource.CreateANewUser
+}
+@section SiteMap{
+    @FCSSResource.MasterManagement &gt;&gt; @FCSSResource.UserManagement
+}
+@section SitePageName{
+添加班级
+}
+@section SiteHead{
+    <script type="text/javascript">
+      
+    </script>
+}
+<div class="context">
+    <table border="0px" bordercolor="#eaeaea" class="dataTable">
+        <tr>
+            <th style="width: 5%">
+                学号
+            </th>
+            <th style="width: 10%">
+                学生
+            </th>
+            <th style="width: 10%">
+                出勤
+            </th>
+            <th>
+                出勤时间
+            </th>
+            <th>
+                原因
+            </th>
+        </tr>
+        @foreach (var item in Model.LessonAttendances)
+        {
+            <tr>
+                <td>
+                    @item.No
+                </td>
+                <td>
+                    @item.StudentName
+                </td>
+                <td>
+                    @I18NUtils.Text(item.AttendanceType)
+                </td>
+                <td>
+                    @item.AttendanceDateTime
+                </td>
+                <td>
+                    @item.Remark
+                </td>
+            </tr>
+        }
+    </table>
+</div>

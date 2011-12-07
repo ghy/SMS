@@ -8,6 +8,7 @@ using SMS.Web.Models;
 using SMS.Web.Models.Attendance;
 using SMS.Services.AttendanceManagement;
 using SMS.Web.Common;
+using SMS.Services.Enum;
 
 namespace SMS.Web.Controllers
 {
@@ -29,14 +30,19 @@ namespace SMS.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(CreateForm form)
+        public ActionResult SignIn(int? id) //lessonId
         {
+            IdNotNull(id);
             if (ModelState.IsValid)
             {
                 try
                 {
                     var processor = manager.Create<AddAttendanceProcessor>();
-                    processor.Execute(ConvertTo<AttendanceAddView>(form));
+                    processor.Execute(new AttendanceAddView()
+                    {
+                        SignInAskOff = Services.Enum.SignInAskOff.Singn,
+                        LessonId = id.Value
+                    });
 
                     ViewSuccessMessage("签到成功");
 
@@ -44,11 +50,48 @@ namespace SMS.Web.Controllers
                 catch (AttendanceException e)
                 {
                     if (e.Type == Services.Enum.AttendanceExceptionType.NotAttendanceTime)
-                        ViewErrorMessage("现在不是上课时间，不能签到");
+                        ViewErrorMessage("只能在上课前15分钟签到!");
                 }
             }
 
             return AjaxJson();
+        }
+
+
+        [HttpPost]
+        public ActionResult AskOff(AskOffForm form)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var processor = manager.Create<AddAttendanceProcessor>();
+                    processor.Execute(new AttendanceAddView()
+                    {
+                        SignInAskOff = SignInAskOff.AskOff,
+                        LessonId = form.LessonId,
+                        Remark = form.AskOffCause
+                    });
+
+                    ViewSuccessMessage("请假已成功提交。");
+                }
+                catch (AttendanceException e)
+                {
+                    if (e.Type == Services.Enum.AttendanceExceptionType.NotAttendanceTime)
+                        ViewErrorMessage("只能在上课前一天请假！");
+                }
+            }
+            return AjaxJson();
+        }
+
+
+
+        public ActionResult LessonAttendance(int id) //lessonId
+        {
+            var llaps = manager.Create<ListLessonAttendanceProcessor>().Execute(id);
+
+            return View(new LessonAttendanceViewModel() { LessonAttendances = llaps });
+
         }
 
     }
